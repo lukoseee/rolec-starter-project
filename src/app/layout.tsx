@@ -3,6 +3,8 @@ import "src/styles/globals.css";
 import { type Metadata } from "next";
 import { Geist } from "next/font/google";
 
+import {Montserrat} from "next/font/google";
+
 import { TRPCReactProvider } from "src/trpc/react";
 
 export const metadata: Metadata = {
@@ -16,12 +18,17 @@ const geist = Geist({
   variable: "--font-geist-sans",
 });
 
+const mainFont = Montserrat({
+  subsets: ["latin"],
+  weight: "400",
+});
+
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${geist.variable}`}>
-      <body>
+    <html lang="en" className={`${mainFont.className } `}>
+      <body className="bg-[#F6F6F6]">
         <TRPCReactProvider>{children}</TRPCReactProvider>
       </body>
     </html>
