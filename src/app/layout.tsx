@@ -6,6 +6,8 @@ import { Geist } from "next/font/google";
 import {Montserrat} from "next/font/google";
 
 import { TRPCReactProvider } from "src/trpc/react";
+import NavBar from "./_components/navbar";
+import Footer from "./_components/footer";
 
 export const metadata: Metadata = {
   title: "Create T3 App",
@@ -29,7 +31,15 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${mainFont.className } `}>
       <body className="bg-[#F6F6F6]">
+        <header className="flex items-center h-20 bg-white ">
+          <div className="pl-25 pr-25 ">
+            <NavBar/>
+          </div>
+        </header>
         <TRPCReactProvider>{children}</TRPCReactProvider>
+        <footer className="bg-[#262626] mt-5">
+          <Footer>hello</Footer>
+        </footer>
       </body>
     </html>
   );

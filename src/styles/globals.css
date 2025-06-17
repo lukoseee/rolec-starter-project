@@ -1,1 +1,6 @@
 @import "tailwindcss";
+
+.rolec-ui-style {
+  all: initial; /* Reset inheritance */
+  contain: style; /* Prevent style leakage */
+}
