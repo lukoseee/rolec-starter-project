@@ -32,7 +32,7 @@ export default function RootLayout({
     <html lang="en" className={`${mainFont.className } `}>
       <body className="bg-[#F6F6F6]">
         <header className="flex items-center h-20 bg-white ">
-          <div className="pl-25 pr-25 ">
+          <div className="pl-25 pr-25">
             <NavBar/>
           </div>
         </header>
