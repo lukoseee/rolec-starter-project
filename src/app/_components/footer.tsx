@@ -9,23 +9,23 @@ const Footer =( ({children}: FooterProps)=> (
         <div className=" justify-between flex flex-col">
             <div className=" flex flex-col space-y-7">
                 <div className="">
-                    <img src="assets/logo/whitelogo.png"></img>
+                    <Image src="/assets/logo/whitelogo.png" alt="logo" width={96} height={16}></Image> 
                 </div>
                 <div className="flex gap-7 ">
                     <Link href="https://www.linkedin.com/company/rolec-services/posts/?feedView=all">
-                        < Image src="/assets/social media/linkedin.png" alt="Description" className="hover:opacity-90 transition-opacity" width={14} height={14}/>
+                        < Image src="/assets/social media/linkedin.png" alt="Description" className="hover:opacity-90 transition-opacity object-contain" width={14} height={14} />
                     </Link>
                     <Link href="https://x.com/rolecev?lang=en">
-                        < Image src="/assets/social media/X.png" alt="Description" className="hover:opacity-90 transition-opacity" width={15} height={14}/>
+                        < Image src="/assets/social media/X.png" alt="Description" className="hover:opacity-90 transition-opacity object-contain" width={15} height={14}/>
                     </Link>
                     <Link href="https://www.facebook.com/RolecServ/">
-                        < Image src="/assets/social media/facebook.png" alt="Description" className="hover:opacity-90 transition-opacity" width={10} height={14}/>
+                        < Image src="/assets/social media/facebook.png" alt="Description" className="hover:opacity-90 transition-opacity object-contain" width={10} height={14}/>
                     </Link>
                     <Link href="https://www.youtube.com/channel/UCR7rnlFCLH1L1x1vcOOqfnA">
-                        < Image src="/assets/social media/youtube.png" alt="Description" className="hover:opacity-90 transition-opacity" width={18} height={14}/>
+                        < Image src="/assets/social media/youtube.png" alt="Description" className="hover:opacity-90 transition-opacity object-contain" width={18} height={14}/>
                     </Link>
                     <Link href="https://www.instagram.com/rolecserv/">
-                        < Image src="/assets/social media/insta.png" alt="Description" className="hover:opacity-90 transition-opacity" width={15} height={14}/>
+                        < Image src="/assets/social media/insta.png" alt="Description" className="hover:opacity-90 transition-opacity object-contain" width={15} height={14}/>
                     </Link>
                 </div>
             </div>

@@ -1,5 +1,6 @@
 export interface ProductType {
   id: number;
+  kind: string[];
   name: string;
   image: string;
   description: string;
@@ -13,6 +14,7 @@ export interface ProductType {
 export const productsArray: ProductType[] = [
   {
     id: 1,
+    kind: ["Home","Commercial"],
     name: "EVO",
     image: "/assets/product-images/evo.png",
     description: "Premium charging station...",
@@ -24,6 +26,7 @@ export const productsArray: ProductType[] = [
   },
   {
     id: 2,
+    kind:["Home"],
     name: "EVO",
     image: "/assets/product-images/zura.png",
     description: "Premium charging station...",
@@ -35,6 +38,7 @@ export const productsArray: ProductType[] = [
   },
   {
     id: 3,
+    kind: ["Home"],
     name: "EVO",
     image: "/assets/product-images/wallpod.png",
     description: "Premium charging station...",
@@ -47,6 +51,7 @@ export const productsArray: ProductType[] = [
   {
     id: 4,
     name: "EVO",
+    kind: ["Commercial"],
     image: "/assets/product-images/ultracharge_240.png",
     description: "Premium charging station...",
     materials: ["Unit & fascia - High impact resistant","Polycarbonate","Mounting back plate - 1.5mm","Steel with black powder coated finish","Rear bracket plate - 1.5mm 316 Stainless","Steel"],
@@ -58,6 +63,7 @@ export const productsArray: ProductType[] = [
   {
     id: 5,
     name: "EVO",
+    kind: ["Commercial"],
     image: "/assets/product-images/ultracharge_160.png",
     description: "Premium charging station...",
     materials: ["Unit & fascia - High impact resistant","Polycarbonate","Mounting back plate - 1.5mm","Steel with black powder coated finish","Rear bracket plate - 1.5mm 316 Stainless","Steel"],
@@ -69,6 +75,7 @@ export const productsArray: ProductType[] = [
   {
     id: 6,
     name: "EVO",
+     kind: ["Commercial"],
     image: "/assets/product-images/ultracharge_80.png",
     description: "Premium charging station...",
     materials: ["Unit & fascia - High impact resistant","Polycarbonate","Mounting back plate - 1.5mm","Steel with black powder coated finish","Rear bracket plate - 1.5mm 316 Stainless","Steel"],
@@ -80,6 +87,7 @@ export const productsArray: ProductType[] = [
   {
     id: 7,
     name: "EVO",
+     kind: ["Home"],
     image: "/assets/product-images/tap_and_charge.png",
     description: "Premium charging station...",
     materials: ["Unit & fascia - High impact resistant","Polycarbonate","Mounting back plate - 1.5mm","Steel with black powder coated finish","Rear bracket plate - 1.5mm 316 Stainless","Steel"],
@@ -91,6 +99,7 @@ export const productsArray: ProductType[] = [
   {
     id: 8,
     name: "EVO",
+     kind: ["Back Office"],
     image: "/assets/product-images/securicharge.png",
     description: "Premium charging station...",
     materials: ["Unit & fascia - High impact resistant","Polycarbonate","Mounting back plate - 1.5mm","Steel with black powder coated finish","Rear bracket plate - 1.5mm 316 Stainless","Steel"],
@@ -102,6 +111,7 @@ export const productsArray: ProductType[] = [
   {
     id: 9,
     name: "EVO",
+     kind: ["Home"],
     image: "/assets/product-images/qubev_smart.png",
     description: "Premium charging station...",
     materials: ["Unit & fascia - High impact resistant","Polycarbonate","Mounting back plate - 1.5mm","Steel with black powder coated finish","Rear bracket plate - 1.5mm 316 Stainless","Steel"],
@@ -113,6 +123,7 @@ export const productsArray: ProductType[] = [
   {
     id: 10,
     name: "EVO",
+    kind: ["Commercial"],
     image: "/assets/product-images/quantum.png",
     description: "Premium charging station...",
     materials: ["Unit & fascia - High impact resistant","Polycarbonate","Mounting back plate - 1.5mm","Steel with black powder coated finish","Rear bracket plate - 1.5mm 316 Stainless","Steel"],
@@ -123,6 +134,7 @@ export const productsArray: ProductType[] = [
   },
   {
     id: 11,
+    kind:["Accessories"],
     name: "EVO",
     image: "/assets/product-images/perific_fuse.png",
     description: "Premium charging station...",
@@ -135,6 +147,7 @@ export const productsArray: ProductType[] = [
   {
     id: 12,
     name: "EVO",
+     kind: ["Commercial"],
     image: "/assets/product-images/ev_consumer_units.png",
     description: "Premium charging station...",
     materials: ["Unit & fascia - High impact resistant","Polycarbonate","Mounting back plate - 1.5mm","Steel with black powder coated finish","Rear bracket plate - 1.5mm 316 Stainless","Steel"],
@@ -146,6 +159,7 @@ export const productsArray: ProductType[] = [
   {
     id: 13,
     name: "EVO",
+     kind: ["Back Office"],
     image: "/assets/product-images/chargecheck.png",
     description: "Premium charging station...",
     materials: ["Unit & fascia - High impact resistant","Polycarbonate","Mounting back plate - 1.5mm","Steel with black powder coated finish","Rear bracket plate - 1.5mm 316 Stainless","Steel"],
@@ -157,6 +171,7 @@ export const productsArray: ProductType[] = [
   {
     id: 14,
     name: "EVO",
+     kind: ["Home"],
     image: "/assets/product-images/basic_charge.png",
     description: "Premium charging station...",
     materials: ["Unit & fascia - High impact resistant","Polycarbonate","Mounting back plate - 1.5mm","Steel with black powder coated finish","Rear bracket plate - 1.5mm 316 Stainless","Steel"],
@@ -168,6 +183,7 @@ export const productsArray: ProductType[] = [
   {
     id: 15,
     name: "EVO",
+     kind: ["AC"],
     image: "/assets/product-images/autocharge.png",
     description: "Premium charging station...",
     materials: ["Unit & fascia - High impact resistant","Polycarbonate","Mounting back plate - 1.5mm","Steel with black powder coated finish","Rear bracket plate - 1.5mm 316 Stainless","Steel"],

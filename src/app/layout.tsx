@@ -8,6 +8,7 @@ import {Montserrat} from "next/font/google";
 import { TRPCReactProvider } from "src/trpc/react";
 import NavBar from "./_components/navbar";
 import Footer from "./_components/footer";
+import CustomSeparator from "./_components/breadcrumb-trail";
 
 export const metadata: Metadata = {
   title: "Create T3 App",
@@ -36,6 +37,9 @@ export default function RootLayout({
             <NavBar/>
           </div>
         </header>
+        <div className="my-5 mx-25">
+            <CustomSeparator></CustomSeparator>
+        </div>
         <TRPCReactProvider>{children}</TRPCReactProvider>
         <footer className="bg-[#262626] mt-5">
           <Footer>hello</Footer>

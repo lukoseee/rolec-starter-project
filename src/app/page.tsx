@@ -1,3 +1,4 @@
+
 import Link from "next/link";
 
 import { LatestPost } from "src/app/_components/post";
@@ -19,26 +20,12 @@ export default async function Home() {
     <HydrateClient>
       <main className= "grid grid-cols-1 bg-[#F6F6F6]">
         
-        <div className = "flex items-center h-15">
-          <div className="flex justify-between w-full pl-25 pr-25 ">
-            <p > Home         &gt;       Knowledge Base </p>
-            <p > Home         &gt;       Knowledge Base </p>
-          </div>
-        </div>
-
         <div className=" pl-25 pr-25">
           <BannerSection/>
         </div>
 
-        <div className="flex items-center h-25 ">
-          <div className="pl-55 pr-45">
-            <CatergoryBar />
-          </div>  
-        </div>
+        <CatergoryBar />
 
-        <div>
-          <ProductList/>
-        </div>
 
         <div>
           <div className="ml-68 mr-68 mt-5">

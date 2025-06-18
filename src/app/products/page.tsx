@@ -13,8 +13,6 @@ export default function ProductList()
             link: string;
         };
     
-    //const router = useRouter();
-
     const Product = ({children, className="" , path="" , id , link} : ProductProps) => (
         <div className=" grid justify-center text-center bg-white w-65 h-75 rounded-b-lg">
             <Link href={link} passHref >
