@@ -27,7 +27,7 @@ export const productsArray: ProductType[] = [
   {
     id: 2,
     kind:["Home"],
-    name: "EVO",
+    name: "ZURA",
     image: "/assets/product-images/zura.png",
     description: "Premium charging station...",
     materials: ["Unit & fascia - High impact resistant","Polycarbonate","Mounting back plate - 1.5mm","Steel with black powder coated finish","Rear bracket plate - 1.5mm 316 Stainless","Steel"],
@@ -39,7 +39,7 @@ export const productsArray: ProductType[] = [
   {
     id: 3,
     kind: ["Home"],
-    name: "EVO",
+    name: "WALLPOD",
     image: "/assets/product-images/wallpod.png",
     description: "Premium charging station...",
     materials: ["Unit & fascia - High impact resistant","Polycarbonate","Mounting back plate - 1.5mm","Steel with black powder coated finish","Rear bracket plate - 1.5mm 316 Stainless","Steel"],
@@ -50,7 +50,7 @@ export const productsArray: ProductType[] = [
   },
   {
     id: 4,
-    name: "EVO",
+    name: "ULTRACHARGE 240",
     kind: ["Commercial"],
     image: "/assets/product-images/ultracharge_240.png",
     description: "Premium charging station...",
@@ -62,7 +62,7 @@ export const productsArray: ProductType[] = [
   },
   {
     id: 5,
-    name: "EVO",
+    name: "ULTRACHARGE 160",
     kind: ["Commercial"],
     image: "/assets/product-images/ultracharge_160.png",
     description: "Premium charging station...",
@@ -74,7 +74,7 @@ export const productsArray: ProductType[] = [
   },
   {
     id: 6,
-    name: "EVO",
+    name: "ULTRACHARGE 80",
      kind: ["Commercial"],
     image: "/assets/product-images/ultracharge_80.png",
     description: "Premium charging station...",
@@ -86,7 +86,7 @@ export const productsArray: ProductType[] = [
   },
   {
     id: 7,
-    name: "EVO",
+    name: "TAP AND CHARGE",
      kind: ["Home"],
     image: "/assets/product-images/tap_and_charge.png",
     description: "Premium charging station...",
@@ -98,7 +98,7 @@ export const productsArray: ProductType[] = [
   },
   {
     id: 8,
-    name: "EVO",
+    name: "SECURICHARGE",
      kind: ["Back Office"],
     image: "/assets/product-images/securicharge.png",
     description: "Premium charging station...",
@@ -110,7 +110,7 @@ export const productsArray: ProductType[] = [
   },
   {
     id: 9,
-    name: "EVO",
+    name: "QUBEV Smart",
      kind: ["Home"],
     image: "/assets/product-images/qubev_smart.png",
     description: "Premium charging station...",
@@ -122,7 +122,7 @@ export const productsArray: ProductType[] = [
   },
   {
     id: 10,
-    name: "EVO",
+    name: "QUANTUM",
     kind: ["Commercial"],
     image: "/assets/product-images/quantum.png",
     description: "Premium charging station...",
@@ -135,7 +135,7 @@ export const productsArray: ProductType[] = [
   {
     id: 11,
     kind:["Accessories"],
-    name: "EVO",
+    name: "PERIFIC FUSE",
     image: "/assets/product-images/perific_fuse.png",
     description: "Premium charging station...",
     materials: ["Unit & fascia - High impact resistant","Polycarbonate","Mounting back plate - 1.5mm","Steel with black powder coated finish","Rear bracket plate - 1.5mm 316 Stainless","Steel"],
@@ -146,7 +146,7 @@ export const productsArray: ProductType[] = [
   },
   {
     id: 12,
-    name: "EVO",
+    name: "CONSUMER UNITS",
      kind: ["Commercial"],
     image: "/assets/product-images/ev_consumer_units.png",
     description: "Premium charging station...",
@@ -158,7 +158,7 @@ export const productsArray: ProductType[] = [
   },
   {
     id: 13,
-    name: "EVO",
+    name: "CHARGECHECK",
      kind: ["Back Office"],
     image: "/assets/product-images/chargecheck.png",
     description: "Premium charging station...",
@@ -170,7 +170,7 @@ export const productsArray: ProductType[] = [
   },
   {
     id: 14,
-    name: "EVO",
+    name: "BASIC CHARGE",
      kind: ["Home"],
     image: "/assets/product-images/basic_charge.png",
     description: "Premium charging station...",
@@ -182,7 +182,7 @@ export const productsArray: ProductType[] = [
   },
   {
     id: 15,
-    name: "EVO",
+    name: "AUTOCHARGE",
      kind: ["AC"],
     image: "/assets/product-images/autocharge.png",
     description: "Premium charging station...",

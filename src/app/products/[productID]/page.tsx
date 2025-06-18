@@ -11,6 +11,7 @@ import VideoPlayer from 'src/app/_components/videoplayer';
 
 import FAQ from 'src/app/_components/faq';
 import React from 'react';
+import SecondNav from 'src/app/_components/secondnav';
 //import { useRef } from "react";
 
 
@@ -27,7 +28,7 @@ export default function ProductDetails({ params }: { params: Promise<{ productID
     }
 
     return ( 
-        <div>
+        <div className="scroll-smooth overflow-auto" >
             <div className="relative h-125 overflow-hidden rounded-b-3xl mr-25 ml-25 mt-5">
                 <div className=" absolute inset-0 bg-[url(/assets/ProductPageBanner.jpg)] bg-[length:100%] bg-position-[0]  flex items-end p-30 text-7xl text-white font-black rounded-b-3xl transition-transform duration-500 hover:scale-110 ">
                     <div className = "flex items-end absolute inset-0 bg-black/50 rounded-b-3xl opacity-0 hover:opacity-100 p-30"> 
@@ -35,13 +36,7 @@ export default function ProductDetails({ params }: { params: Promise<{ productID
                     </div>    
                 </div>
             </div>
-            <div className="text-xl flex justify-center mr-25 ml-25 h-15 items-center gap-10">
-                <NavItem handleClick='#technical'>Technical Documentation</NavItem>
-                <NavItem handleClick='#faq'>FAQ</NavItem>
-                <NavItem handleClick='#videos'>Videos</NavItem>
-                <NavItem handleClick='#articles'>Articles</NavItem>
-            </div>
-
+            <SecondNav></SecondNav>
             <div id= "technical" className="flex mr-40 ml-40 justify-evenly">
                 <div className="flex flex-col justify-evenly">
                     <div>
@@ -76,11 +71,11 @@ export default function ProductDetails({ params }: { params: Promise<{ productID
                 </div>
             </div>
 
-            <div id='faq' className="mr-40 ml-40 mt-25 pb-20 pt-20 bg-[#FFFFFF]">
+            <div id='faq' className="mr-40 ml-40 mt-25 pb-20 pt-20 bg-[#FFFFFF] rounded-3xl">
                 <div className="pl-60 text-4xl font-black mb-5">
                     <h1>Frequently Asked Questions</h1>
                 </div>
-                <div className="mr-65 ml-65 bg-[#FFFFFF]">
+                <div className="mr-65 ml-65 bg-[#FFFFFF] ">
                     <FAQ></FAQ>
                 </div>
             </div>
