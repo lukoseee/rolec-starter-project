@@ -1,6 +1,7 @@
 
 import Link from "next/link";
 import { productsArray } from "src/data/productDesc";
+import CatergoryBar from "../_components/categorybar";
 
 export default function ProductList()
 {
@@ -26,7 +27,7 @@ export default function ProductList()
 
     return(
         <div className="flex flex-wrap ml-45 mr-45 justify-center gap-4">
-            { productsArray.map( (product) => (<Product link={`/products/${product.id}`} key={product.id} id={product.id} path={product.image}>{product.name}</Product>) )}
+            <CatergoryBar></CatergoryBar>
         </div>
     );
 

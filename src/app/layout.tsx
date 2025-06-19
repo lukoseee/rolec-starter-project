@@ -30,20 +30,25 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${mainFont.className } `}>
-      <body className="bg-[#F6F6F6]">
-        <header className="flex items-center h-20 bg-white ">
-          <div className="pl-25 pr-25">
+    <html lang="en" className={`${mainFont.className } `} >
+      <meta name="viewport"/>
+      <body className="bg-[#F6F6F6] m-0 p-0">
+        <div className="flex items-center bg-white w-full sm:pl-25 m-0 p-0 h-20">
+          <div className="w-full "> 
             <NavBar/>
           </div>
-        </header>
-        <div className="my-5 mx-25">
+        </div> 
+         <div className="my-5 sm:mx-28 mx-5">
             <CustomSeparator></CustomSeparator>
         </div>
+
+        {
         <TRPCReactProvider>{children}</TRPCReactProvider>
+        }
+
         <footer className="bg-[#262626] mt-5">
           <Footer>hello</Footer>
-        </footer>
+        </footer> 
       </body>
     </html>
   );

@@ -14,7 +14,7 @@ export default function CustomSeparator() {
   
     return (
 
-    <nav className="flex items-center text-gray-400 capitalize">
+    <nav className="flex items-center text-gray-400 capitalize text-[13px] sm:text-lg">
       <Link href="/" className="hover:underline">Home</Link>
 
       {segments.map((segment, index) => {

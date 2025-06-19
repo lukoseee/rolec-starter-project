@@ -13,10 +13,10 @@ export default function IconHeader( {children, path, h, w, lines = [], font, hea
 {
     return (
         <div className="flex gap-2">
-            <div>
-                <img src={path} width={w} height={h}></img>
+            <div className="pt-0.5 md:pt-1.5 m-0 ">
+                <img src={path} className="object-fit" ></img>
             </div>
-            <div>   
+            <div className="p-0 m-0 ">   
                 <h1 className={headerfont}>{children}</h1>
                 {lines.map( (line,index) => <p className = {font} key={index}>{line}</p>)}
             </div>

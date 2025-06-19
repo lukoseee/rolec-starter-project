@@ -5,7 +5,7 @@ export default function SecondNav()
 {   
     
     return(
-        <div className="text-xl flex justify-center mr-25 ml-25 h-15 items-center gap-10">
+        <div className="text-sm md:text-xl flex justify-center md:mx-25 h-15 items-center gap-0 md:gap-10">
             <NavItem handleClick='#technical'>Technical Documentation</NavItem>
             <NavItem handleClick='#faq'>FAQ</NavItem>
             <NavItem handleClick='#videos'>Videos</NavItem>

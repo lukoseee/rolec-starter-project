@@ -20,24 +20,23 @@ export default async function Home() {
     <HydrateClient>
       <main className= "grid grid-cols-1 bg-[#F6F6F6]">
         
-        <div className=" pl-25 pr-25">
+        <div className="px-2 sm:px-25">
           <BannerSection/>
         </div>
 
-        <CatergoryBar />
+         <CatergoryBar />
 
-
+       
         <div>
-          <div className="ml-68 mr-68 mt-5">
-            <Banner classname = "bg-[length:105%] bg-position-[3]" text1=" Morbi rutrum velit sed mollis ornare. Donec viverra" text2="eleifend mi, vel laoreet lorem ut nisi faucibus" button="Lets have a chat!">Topone</Banner>
+          <div className="mx-2 md:mx-68 mt-5">
+            <Banner classname = "bg-cover bg-[position:50%_39%] h-60 md:h-100 text-xs"  text1=" Morbi rutrum velit sed mollis ornare. Donec viverra" text2="eleifend mi, vel laoreet lorem ut nisi faucibus" button="Lets have a chat!">Topone</Banner>
           </div>
         </div>
-
-        <div className="flex ml-68 mr-68 mt-5 gap-5 ">
+        <div className="mx-2 md:mx-68 mt-5 gap-5 grid md:flex ">
             <Banner path="/assets/smallbanner2.jpg" classname="bg-[length:130%] bg-position-[3]" transparency={50} formfield={true} header1="Rolectrified" header2="Newsletter" text1="Morbi rutrum velit sed mollis ornare. Donec viverra" text2="eleifend mi, vel laoreet ex" button="Sign up">lol</Banner>
             <Banner width={170} path="/assets/smallbanner1.jpg" classname="bg-[length:90%] bg-top" transparency={50} header1="Rolectrified" header2="Newsletter" text1="Morbi rutrum velit sed mollis ornare. Donec viverra" text2="eleifend mi, vel laoreet ex" button="Listen to the podcast now!">lol</Banner>
-        </div>
-
+        </div> 
+          
         
       </main>
     </HydrateClient>
