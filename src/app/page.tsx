@@ -12,9 +12,9 @@ import Footer from "src/app/_components/footer";
 import ProductList from "./products/page";
 
 export default async function Home() {
-  const hello = await api.post.hello({ text: "from tRPC" });
+  //const hello = await api.post.hello({ text: "from tRPC" });
 
-  void api.post.getLatest.prefetch();
+  //void api.post.getLatest.prefetch();
 
   return (
     <HydrateClient>
@@ -25,8 +25,6 @@ export default async function Home() {
         </div>
 
          <CatergoryBar />
-
-       
         <div>
           <div className="mx-2 md:mx-68 mt-5">
             <Banner classname = "bg-cover bg-[position:50%_39%] h-60 md:h-100 text-xs"  text1=" Morbi rutrum velit sed mollis ornare. Donec viverra" text2="eleifend mi, vel laoreet lorem ut nisi faucibus" button="Lets have a chat!">Topone</Banner>

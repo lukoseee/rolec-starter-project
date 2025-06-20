@@ -15,13 +15,13 @@ function NavBar(){
         }else {
             setClicked("Example");
         }
-    },[path]);
+    }, [path]);
 
     if (!path) return null;
 
     return (
         <nav className = "flex justify-between sm:justify-start items-center bg-white text-black sm:gap-20">
-            <Button href="../">
+            <Button href="/">
                 <img src = {"/assets/logo/logo.png"} width={150} height={20} className=""/>
             </Button>
             <div className="navbar-center">
