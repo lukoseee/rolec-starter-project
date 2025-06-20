@@ -12,12 +12,12 @@ function NavBar(){
     useEffect( () => {
         if(path.includes("/products")){
             setClicked("Knowledge Base")
-        }else{
+        }else {
             setClicked("Example");
         }
     },[path]);
 
-
+    if (!path) return null;
 
     return (
         <nav className = "flex justify-between sm:justify-start items-center bg-white text-black sm:gap-20">

@@ -90,8 +90,8 @@ export default function ProductDetails({ params }: { params: Promise<{ productID
             <div id='articles' className="mt-3 md:mt-15 md:mx-25 flex flex-col gap-3 md:gap-6">
                 <div className="text-2xl flex justify-center md:justify-start md:text-4xl md:mx-40 font-black">
                     <h1>Related Articles</h1>
-                </div>
-                <div className="mx-2 md:mx-30 grid grid-cols-3 gap-3">
+                </div>  
+                <div className="mx-4 md:mx-30 grid md:grid-cols-3 gap-3 ">
                     <Question>Why does my charger not connect the OCPP platform?</Question>
                     <Question>Why does my charger not connect the OCPP platform?</Question>
                     <Question>Why does my charger not connect the OCPP platform?</Question>
