@@ -17,8 +17,8 @@ export const createTable = sqliteTableCreator(
 export const products = createTable(
   "products",
   (d) => ({
-    id: d.integer({ mode: "number" }).primaryKey({ autoIncrement: true }),
-    name: d.text({ length: 256 }),
+    id: d.integer({ mode: "number" }).primaryKey(),
+    name: d.text(),
     kind: d.text(),
     image: d.text(),
     description: d.text(),
