@@ -31,8 +31,8 @@ export default async function Home() {
           </div>
         </div>
         <div className="mx-2 md:mx-68 mt-5 gap-5 grid md:flex ">
-            <Banner path="/assets/smallbanner2.jpg" classname="bg-[length:130%] bg-position-[3]" transparency={50} formfield={true} header1="Rolectrified" header2="Newsletter" text1="Morbi rutrum velit sed mollis ornare. Donec viverra" text2="eleifend mi, vel laoreet ex" button="Sign up">lol</Banner>
-            <Banner width={170} path="/assets/smallbanner1.jpg" classname="bg-[length:90%] bg-top" transparency={50} header1="Rolectrified" header2="Newsletter" text1="Morbi rutrum velit sed mollis ornare. Donec viverra" text2="eleifend mi, vel laoreet ex" button="Listen to the podcast now!">lol</Banner>
+            <Banner path="https://dwqsg9sdff.ufs.sh/f/RtbpbkCLpXS4pxZPEGXaCE7yT9hrGKXmYVZbJvcOW1kQgI5x" classname="bg-[length:130%] bg-position-[3]" transparency={50} formfield={true} header1="Rolectrified" header2="Newsletter" text1="Morbi rutrum velit sed mollis ornare. Donec viverra" text2="eleifend mi, vel laoreet ex" button="Sign up">lol</Banner>
+            <Banner width={170} path="https://dwqsg9sdff.ufs.sh/f/RtbpbkCLpXS4YWDWgxvMwd9fFlRJku46VnP8qXOp2mHTW0jr" classname="bg-[length:90%] bg-top" transparency={50} header1="Rolectrified" header2="Newsletter" text1="Morbi rutrum velit sed mollis ornare. Donec viverra" text2="eleifend mi, vel laoreet ex" button="Listen to the podcast now!">lol</Banner>
         </div> 
           
         
