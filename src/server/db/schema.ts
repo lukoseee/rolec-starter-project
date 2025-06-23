@@ -14,11 +14,19 @@ export const createTable = sqliteTableCreator(
   (name) => `lc_rolecstarter_${name}`,
 );
 
-export const posts = createTable(
-  "post",
+export const products = createTable(
+  "products",
   (d) => ({
     id: d.integer({ mode: "number" }).primaryKey({ autoIncrement: true }),
     name: d.text({ length: 256 }),
+    kind: d.text(),
+    image: d.text(),
+    description: d.text(),
+    materials: d.text(),
+    enclosure_dimentions: d.text(),
+    charge_protocols: d.text(),
+    input_voltage: d.text(),
+    protection: d.text(),
     createdAt: d
       .integer({ mode: "timestamp" })
       .default(sql`(unixepoch())`)
