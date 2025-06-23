@@ -18,7 +18,7 @@ type BannerProps = {
 };
 
 
-const Banner = ({children, width, classname="", path = "/assets/banner2.png", height = 100, header1= "Arrange Training", header2 = "At your premises", text1 = "", text2 = "", button="button", transparency=0 , formfield=false }: BannerProps) => (
+const Banner = ({children, width, classname="", path = "https://dwqsg9sdff.ufs.sh/f/RtbpbkCLpXS4kzAojPgO3hRV9H8goyiFtc6z2sIl1juaqweG", height = 100, header1= "Arrange Training", header2 = "At your premises", text1 = "", text2 = "", button="button", transparency=0 , formfield=false }: BannerProps) => (
     <div className = {`relative h-${height} relative p-9 md:p-15  ${classname} w-full `}>
         <div style={{ backgroundImage: `url(${path})` }} className = {`absolute inset-0 rounded-3xl ${classname} `}></div>
         <div className = {`absolute inset-0 bg-black/${transparency} rounded-3xl`}> </div>

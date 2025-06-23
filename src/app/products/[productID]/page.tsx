@@ -48,11 +48,11 @@ export default function ProductDetails({ params }: { params: Promise<{ productID
                             <h1 className="text-xl md:text-4xl font-black ">Downloads</h1>
                         </div>
                         <div className="flex flex-col gap-3 text-xl">
-                            <IconHeader path="/assets/icons/table-list.png" headerfont='text-xs md:text-xl'>Data Sheet</IconHeader>
-                            <IconHeader path="/assets/icons/tool.png" w={25} h={30} headerfont='text-xs md:text-xl'>Installation and Operation Manual</IconHeader>
-                            <IconHeader path="/assets/icons/Shield.png" w={25} h={30} headerfont='text-xs md:text-xl'>Statement Of Compliance</IconHeader>
-                            <IconHeader path="/assets/icons/FileText.png" w={25} h={30} headerfont='text-xs md:text-xl'>UKCA & CE Declaration of Conformity</IconHeader>
-                            <IconHeader path="/assets/icons/3D.png" w={25} h={30} headerfont='text-xs md:text-xl'>NBS BIM & CAD Packages</IconHeader>
+                            <IconHeader path="/assets/icons/table-list.svg" headerfont='text-xs md:text-xl'>Data Sheet</IconHeader>
+                            <IconHeader path="/assets/icons/tool.svg" w={25} h={30} headerfont='text-xs md:text-xl'>Installation and Operation Manual</IconHeader>
+                            <IconHeader path="/assets/icons/Shield.svg" w={25} h={30} headerfont='text-xs md:text-xl'>Statement Of Compliance</IconHeader>
+                            <IconHeader path="/assets/icons/FileText.svg" w={25} h={30} headerfont='text-xs md:text-xl'>UKCA & CE Declaration of Conformity</IconHeader>
+                            <IconHeader path="/assets/icons/3D.svg" w={25} h={30} headerfont='text-xs md:text-xl'>NBS BIM & CAD Packages</IconHeader>
                         </div>
                     </div>
                 </div>
@@ -64,11 +64,11 @@ export default function ProductDetails({ params }: { params: Promise<{ productID
                                 <h1 className="text-xl md:text-4xl font-black ">Specification</h1>
                             </div>
                             <div className="flex flex-col gap-3 text-xl">
-                                <IconHeader path="/assets/icons/hexagon.png" w={20} h={4} lines={product.materials} headerfont="font-medium md:font-semibold" font="text-xs md:text-xl" >Materials</IconHeader>
-                                <IconHeader path="/assets/icons/move.png" w={20} h={30} lines={product.enclosure_dimensions} headerfont="font-medium md:font-semibold" font="text-xs md:text-xl">Enclosure Dimensions</IconHeader>
-                                <IconHeader path="/assets/icons/git-commit.png" w={20} h={30} lines={product.charge_protocol} headerfont="font-medium md:font-semibold" font="text-xs md:text-xl">Charge Protocol</IconHeader>
-                                <IconHeader path="/assets/icons/zap.png" w={20} h={30} lines={product.input_voltage} headerfont="font-medium md:font-semibold" font="text-xs md:text-xl">Input Voltage</IconHeader>
-                                <IconHeader path="/assets/icons/shield2.png" w={20} h={30} lines={product.protection} headerfont="font-medium md:font-semibold" font="text-xs md:text-xl">Protection</IconHeader>
+                                <IconHeader path="/assets/icons/hexagon.svg" w={20} h={4} lines={product.materials} headerfont="font-medium md:font-semibold" font="text-xs md:text-xl" >Materials</IconHeader>
+                                <IconHeader path="/assets/icons/move.svg" w={20} h={30} lines={product.enclosure_dimensions} headerfont="font-medium md:font-semibold" font="text-xs md:text-xl">Enclosure Dimensions</IconHeader>
+                                <IconHeader path="/assets/icons/git-commit.svg" w={20} h={30} lines={product.charge_protocol} headerfont="font-medium md:font-semibold" font="text-xs md:text-xl">Charge Protocol</IconHeader>
+                                <IconHeader path="/assets/icons/zap.svg" w={20} h={30} lines={product.input_voltage} headerfont="font-medium md:font-semibold" font="text-xs md:text-xl">Input Voltage</IconHeader>
+                                <IconHeader path="/assets/icons/shield2.svg" w={20} h={30} lines={product.protection} headerfont="font-medium md:font-semibold" font="text-xs md:text-xl">Protection</IconHeader>
                             </div>
                         </div>
                     </div>

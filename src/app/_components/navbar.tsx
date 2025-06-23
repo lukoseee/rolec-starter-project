@@ -22,7 +22,7 @@ function NavBar(){
     return (
         <nav className = "flex justify-between sm:justify-start items-center bg-white text-black sm:gap-20">
             <Button href="/">
-                <img src = {"/assets/logo/logo.png"} width={150} height={20} className=""/>
+                <img src = {"/assets/logo/Logo.svg"} width={150} height={20} className=""/>
             </Button>
             <div className="navbar-center">
                 <div className="flex list-none m-0 p-5 sm:p-0 gap-2 sm:gap-15 text-xs sm:text-xl">

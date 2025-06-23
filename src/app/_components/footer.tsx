@@ -11,23 +11,23 @@ const Footer =( ({children}: FooterProps)=> (
         <div className="justify-between flex flex-col ">
             <div className=" flex flex-col space-y-3 sm:space-y-7">
                 <div className="">
-                    <Image src="https://dwqsg9sdff.ufs.sh/f/RtbpbkCLpXS4LjOQO3BXwtF8TG9KgP1msMcpINC06AyrWUVl" className="w-10 h-5 sm:w-20 sm:h-10" alt="SVG" width={0} height={0}></Image> 
+                    <Image src="/assets/logo/Group.svg" className="w-10 h-5 sm:w-20 sm:h-10" alt="SVG" width={0} height={0}></Image> 
                 </div>
                 <div className="flex gap-3 sm:gap-7 ">
                     <Link href="https://www.linkedin.com/company/rolec-services/posts/?feedView=all">
-                        < Image src="/assets/social media/linkedin.png" alt="Description" className="hover:opacity-90 transition-opacity object-contain w-2 h-2 sm:h-4 sm:w-4" width={0} height={0}  />
+                        < Image src="/assets/social media/linkedin.svg" alt="Description" className="hover:opacity-90 transition-opacity object-contain w-2 h-2 sm:h-4 sm:w-4" width={0} height={0}  />
                     </Link>
                     <Link href="https://x.com/rolecev?lang=en">
-                        < Image src="/assets/social media/X.png" alt="Description" className="hover:opacity-90 transition-opacity object-contain w-2 h-2 sm:h-4 sm:w-4" width={0} height={0}/>
+                        < Image src="/assets/social media/x.svg" alt="Description" className="hover:opacity-90 transition-opacity object-contain w-2 h-2 sm:h-4 sm:w-4" width={0} height={0}/>
                     </Link>
                     <Link href="https://www.facebook.com/RolecServ/">
-                        < Image src="/assets/social media/facebook.png" alt="Description" className="hover:opacity-90 transition-opacity object-contain w-2 h-2 sm:h-4 sm:w-4" width={0} height={0}/>
+                        < Image src="/assets/social media/facebook.svg" alt="Description" className="hover:opacity-90 transition-opacity object-contain w-2 h-2 sm:h-4 sm:w-4" width={0} height={0}/>
                     </Link>
                     <Link href="https://www.youtube.com/channel/UCR7rnlFCLH1L1x1vcOOqfnA">
-                        < Image src="/assets/social media/youtube.png" alt="Description" className="hover:opacity-90 transition-opacity object-contain w-2 h-2 sm:h-4 sm:w-4" width={0} height={0}/>
+                        < Image src="/assets/social media/youtube.svg" alt="Description" className="hover:opacity-90 transition-opacity object-contain w-2 h-2 sm:h-4 sm:w-4" width={0} height={0}/>
                     </Link>
                     <Link href="https://www.instagram.com/rolecserv/">
-                        < Image src="https://dwqsg9sdff.ufs.sh/f/RtbpbkCLpXS4FHr8BNa8FZkTwRCJju1asvY3KMN40iOdcnmW" alt="Description" className="hover:opacity-90 transition-opacity object-contain w-2 h-2 sm:h-4 sm:w-4" width={0} height={0}/>
+                        < Image src="/assets/social media/instagram.svg" alt="Description" className="hover:opacity-90 transition-opacity object-contain w-2 h-2 sm:h-4 sm:w-4" width={0} height={0}/>
                     </Link>
                 </div>
             </div>
