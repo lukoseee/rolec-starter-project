@@ -10,11 +10,20 @@ import CatergoryBar from "src/app/_components/categorybar";
 import Banner from "src/app/_components/banner";
 import Footer from "src/app/_components/footer";
 import ProductList from "./products/page";
+import { db } from "src/server/db";
+import { products } from "src/server/db/schema";
+import {eq} from "drizzle-orm";
+
+
+
+
 
 export default async function Home() {
   //const hello = await api.post.hello({ text: "from tRPC" });
 
   //void api.post.getLatest.prefetch();
+
+  //logProduct();
 
   return (
     <HydrateClient>

@@ -11,27 +11,26 @@ import { index, sqliteTableCreator } from "drizzle-orm/sqlite-core";
  * @see https://orm.drizzle.team/docs/goodies#multi-project-schema
  */
 export const createTable = sqliteTableCreator(
-  (name) => `lc_rolecstarter_${name}`,
+  (name) => `${name}`,
 );
 
 export const products = createTable(
   "products",
   (d) => ({
-    id: d.integer({ mode: "number" }).primaryKey(),
-    name: d.text(),
-    kind: d.text(),
+    id: d.integer({ mode: "number" }).primaryKey({ autoIncrement: true }),
+    product_name: d.text({ length: 256 }),
     image: d.text(),
+    kind: d.text({ length: 1024}),
     description: d.text(),
     materials: d.text(),
-    enclosure_dimentions: d.text(),
-    charge_protocols: d.text(),
+    enclosure_dimensions: d.text(),
+    charge_protocol: d.text(),
     input_voltage: d.text(),
-    protection: d.text(),
     createdAt: d
       .integer({ mode: "timestamp" })
       .default(sql`(unixepoch())`)
       .notNull(),
     updatedAt: d.integer({ mode: "timestamp" }).$onUpdate(() => new Date()),
   }),
-  (t) => [index("name_idx").on(t.name)],
+  (t) => [index("name_idx").on(t.product_name)],
 );

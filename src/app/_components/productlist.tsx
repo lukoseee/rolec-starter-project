@@ -1,8 +1,11 @@
 
 import Link from "next/link";
 import { productsArray } from "src/data/productDesc";
+import { db } from "src/server/db";
+import { products } from "src/server/db/schema";
 
-export default function ProductList()
+
+export default async function ProductList()
 {
 
     type ProductProps = {
@@ -14,7 +17,10 @@ export default function ProductList()
         };
     
     //const router = useRouter();
-
+    const producstsarray = await db.select().from(products);
+    
+    console.log(producstsarray);
+    
     const Product = ({children, className="" , path="" , id , link} : ProductProps) => (
         <div className=" grid justify-center text-center bg-white w-65 h-75 rounded-b-lg">
             <Link href={link} >
@@ -28,7 +34,7 @@ export default function ProductList()
 
     return(
         <div className="flex flex-wrap ml-45 mr-45 justify-center gap-4">
-            { productsArray.map( (product) => (<Product link={`/products/${product.id}`} key={product.id} id={product.id} path={product.image}>{product.name} </Product>) )}
+            { producstsarray.map( (product) => (<Product link={`/products/${product.id}`} key={product.id} id={product.id} path={product.image!}>{product.product_name} </Product>) )}
         </div>
     );
 
