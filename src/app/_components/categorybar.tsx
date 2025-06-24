@@ -4,20 +4,34 @@ import { useState, type ReactEventHandler } from "react";
 import { productsArray } from "src/data/productDesc";
 import {AnimatePresence, motion} from 'framer-motion';
 import { json } from "stream/consumers";
+import { db } from "src/server/db";
+import { products } from "src/server/db/schema";
+import { LatestPost } from "src/app/_components/post";
 
-
+import { api } from "src/trpc/react";
 
 function CatergoryBar()
 {   
-   const [category, setCategory] = useState(productsArray);
+   const helloQuery = api.post.hello.useQuery({text:"world"});
+
+    console.log("Query status:", {
+    data: helloQuery.data,
+    error: helloQuery.error,
+    status: helloQuery.status
+    });
+
+   const {data: productsarray} = api.post.getAll.useQuery();
+    
+
+   const [category, setCategory] = useState(productsarray!);
    const [active, setActive] = useState("All");
     
     const handleBtns = (word: string) => {
         setActive(word);
         if (word === "All") {
-            setCategory(productsArray);
+            setCategory(productsarray!);
         } else {
-            const filtered = productsArray.filter(item => item.kind.includes(word));
+            const filtered = productsarray!.filter(item => item.kind!.includes(word));
             setCategory(filtered);
         }
     };
@@ -67,7 +81,7 @@ function CatergoryBar()
             <AnimatePresence mode="wait">
                 <motion.div key={JSON.stringify(category)} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.2 }} >
                     <div className="flex flex-wrap mx-0 sm:mx-45 justify-center gap-2">
-                        { category.map( (product) => (<Product link={`/products/${product.id}`} key={product.id} id={product.id} path={product.image}>{product.name} </Product>) )}
+                         { category.map( (product) => (<Product link={`/products/${product.id}`} key={product.id} id={product.id} path={product.image!}>{product.product_name} </Product>) )}
                     </div>
                 </motion.div>
             </AnimatePresence>

@@ -32,8 +32,7 @@ export default async function Home() {
         <div className="px-2 sm:px-25">
           <BannerSection/>
         </div>
-
-         <CatergoryBar />
+         <CatergoryBar /> 
         <div>
           <div className="mx-2 md:mx-68 mt-5">
             <Banner classname = "bg-cover bg-[position:50%_39%] h-60 md:h-100 text-xs"  text1=" Morbi rutrum velit sed mollis ornare. Donec viverra" text2="eleifend mi, vel laoreet lorem ut nisi faucibus" button="Lets have a chat!">Topone</Banner>
