@@ -11,20 +11,18 @@ import { LatestPost } from "src/app/_components/post";
 import { api } from "src/trpc/react";
 
 function CatergoryBar()
-{   
-   const helloQuery = api.post.hello.useQuery({text:"world"});
+{  
+   const {data: productsarray, isLoading} = api.post.getAll.useQuery();
 
-    console.log("Query status:", {
-    data: helloQuery.data,
-    error: helloQuery.error,
-    status: helloQuery.status
-    });
-
-   const {data: productsarray} = api.post.getAll.useQuery();
-    
+   //giving time to fetch data from db (takes 400ms)
+   if(isLoading)
+   {
+    return<div>Loading...</div>
+   }
 
    const [category, setCategory] = useState(productsarray!);
    const [active, setActive] = useState("All");
+
     
     const handleBtns = (word: string) => {
         setActive(word);
@@ -81,7 +79,7 @@ function CatergoryBar()
             <AnimatePresence mode="wait">
                 <motion.div key={JSON.stringify(category)} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.2 }} >
                     <div className="flex flex-wrap mx-0 sm:mx-45 justify-center gap-2">
-                         { category.map( (product) => (<Product link={`/products/${product.id}`} key={product.id} id={product.id} path={product.image!}>{product.product_name} </Product>) )}
+                         { category.map( (product) => (<Product link={`/products/${product.id}`} key={product.id} id={product.id} path={product.image!}> {product.product_name} </Product>) )}
                     </div>
                 </motion.div>
             </AnimatePresence>

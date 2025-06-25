@@ -26,6 +26,7 @@ export const products = createTable(
     enclosure_dimensions: d.text(),
     charge_protocol: d.text(),
     input_voltage: d.text(),
+    protection: d.text(),
     createdAt: d
       .integer({ mode: "timestamp" })
       .default(sql`(unixepoch())`)

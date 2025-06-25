@@ -14,6 +14,7 @@ export interface ProductType {
 // Unit & fascia - High impact resistant, Polycarbonate, Mounting back plate - 1.5mm, Steel with black powder coated finish, Rear bracket plate - 1.5mm 316 Stainless, Steel
 // 260mm (W), 410mm (H), 157mm (D)
 // 230V AC (±10 %), 50/60Hz (Single Phase), 400V AC (±10 %), 50/60Hz (3 Phase)
+//Over current protection, DC fault protection, - 6mA, Lightning surge, over temperature, protection, PME fault detection, Load, balancing
 
 export const productsArray: ProductType[] = [
   {
