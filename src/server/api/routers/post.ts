@@ -13,10 +13,18 @@ export const postRouter = createTRPCRouter({
     }),
 
   create: publicProcedure
-    .input(z.object({ name: z.string().min(1) }))
+    .input(z.object({ name: z.string().min(1), image: z.string().min(1),  kind: z.string().min(1),  description: z.string().min(1),  materials: z.string().min(1),  enclosure_dimensions: z.string().min(1), charge_protocol: z.string().min(1),  input_voltage: z.string().min(1), protection: z.string().min(1),},))
     .mutation(async ({ ctx, input }) => {
       await ctx.db.insert(products).values({
         product_name: input.name,
+				image: input.image,
+        kind: input.kind,
+        description: input.description,
+        materials: input.materials,
+        enclosure_dimensions: input.enclosure_dimensions,
+        charge_protocol: input.charge_protocol,
+        input_voltage: input.input_voltage,
+        protection: input.protection,
       });
     }),
 

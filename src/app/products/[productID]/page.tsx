@@ -41,7 +41,7 @@ export default async function ProductDetails({ params }: { params: { productID: 
             <div id= "technical" className="grid md:flex mx-2 md:mx-40 justify-evenly">
                 <div className="  flex flex-col items-center md:justify-evenly">
                     <div>
-                        <img src= {product.image!} className="scale-[150%]"></img>
+                        <img src= {product.image} className="scale-[150%]"></img>
                     </div>
                     <div className=" flex flex-col items-left gap-6">
                         <div className=''>
@@ -64,11 +64,11 @@ export default async function ProductDetails({ params }: { params: { productID: 
                                 <h1 className="text-xl md:text-4xl font-black ">Specification</h1>
                             </div>
                             <div className="flex flex-col gap-3 text-xl">
-                                <IconHeader path="/assets/icons/hexagon.svg" w={20} h={4} lines={product.materials!.split(',')} headerfont="font-medium md:font-semibold" font="text-xs md:text-xl" >Materials</IconHeader>
-                                <IconHeader path="/assets/icons/move.svg" w={20} h={30} lines={product.enclosure_dimensions!.split(',')} headerfont="font-medium md:font-semibold" font="text-xs md:text-xl">Enclosure Dimensions</IconHeader>
-                                <IconHeader path="/assets/icons/git-commit.svg" w={20} h={30} lines={product.charge_protocol!.split(',')} headerfont="font-medium md:font-semibold" font="text-xs md:text-xl">Charge Protocol</IconHeader>
-                                <IconHeader path="/assets/icons/zap.svg" w={20} h={30} lines={product.input_voltage!.split(',')} headerfont="font-medium md:font-semibold" font="text-xs md:text-xl">Input Voltage</IconHeader>
-                                <IconHeader path="/assets/icons/shield2.svg" w={20} h={30} lines={product.protection!.split(',')} headerfont="font-medium md:font-semibold" font="text-xs md:text-xl">Protection</IconHeader>
+                                <IconHeader path="/assets/icons/hexagon.svg" w={20} h={4} lines={product.materials.split(',')} headerfont="font-medium md:font-semibold" font="text-xs md:text-xl" >Materials</IconHeader>
+                                <IconHeader path="/assets/icons/move.svg" w={20} h={30} lines={product.enclosure_dimensions.split(',')} headerfont="font-medium md:font-semibold" font="text-xs md:text-xl">Enclosure Dimensions</IconHeader>
+                                <IconHeader path="/assets/icons/git-commit.svg" w={20} h={30} lines={product.charge_protocol.split(',')} headerfont="font-medium md:font-semibold" font="text-xs md:text-xl">Charge Protocol</IconHeader>
+                                <IconHeader path="/assets/icons/zap.svg" w={20} h={30} lines={product.input_voltage.split(',')} headerfont="font-medium md:font-semibold" font="text-xs md:text-xl">Input Voltage</IconHeader>
+                                <IconHeader path="/assets/icons/shield2.svg" w={20} h={30} lines={product.protection.split(',')} headerfont="font-medium md:font-semibold" font="text-xs md:text-xl">Protection</IconHeader>
                             </div>
                         </div>
                     </div>

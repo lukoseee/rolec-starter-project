@@ -18,15 +18,15 @@ export const products = createTable(
   "products",
   (d) => ({
     id: d.integer({ mode: "number" }).primaryKey({ autoIncrement: true }),
-    product_name: d.text({ length: 256 }),
-    image: d.text(),
-    kind: d.text({ length: 1024}),
-    description: d.text(),
-    materials: d.text(),
-    enclosure_dimensions: d.text(),
-    charge_protocol: d.text(),
-    input_voltage: d.text(),
-    protection: d.text(),
+    product_name: d.text({ length: 256 }).notNull(),
+    image: d.text().notNull(),
+    kind: d.text({ length: 1024}).notNull(),
+    description: d.text().notNull(),
+    materials: d.text().notNull(),
+    enclosure_dimensions: d.text().notNull(),
+    charge_protocol: d.text().notNull(),
+    input_voltage: d.text().notNull(),
+    protection: d.text().notNull(),
     createdAt: d
       .integer({ mode: "timestamp" })
       .default(sql`(unixepoch())`)

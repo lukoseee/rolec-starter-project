@@ -88,7 +88,7 @@ function CatergoryBar()
             <AnimatePresence mode="wait">
                 <motion.div key={JSON.stringify(category)} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.2 }} >
                     <div className="flex flex-wrap mx-0 sm:mx-45 justify-center gap-2">
-                         { category && category!.map( (product) => (<Product link={`/products/${product.id}`} key={product.id} id={product.id} path={product.image!}> {product.product_name} </Product>) )}
+                         { category && category!.map( (product) => (<Product link={`/products/${product.id}`} key={product.id} id={product.id} path={product.image}> {product.product_name} </Product>) )}
                     </div>
                 </motion.div>
             </AnimatePresence>
