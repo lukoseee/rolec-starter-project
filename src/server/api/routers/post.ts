@@ -2,7 +2,7 @@ import { z } from "zod";
 
 import { createTRPCRouter, publicProcedure } from "src/server/api/trpc";
 import { products } from "src/server/db/schema";
-
+import { eq } from "drizzle-orm";
 export const postRouter = createTRPCRouter({
   hello: publicProcedure
     .input(z.object({ text: z.string() }))
@@ -29,7 +29,12 @@ export const postRouter = createTRPCRouter({
   }),
 
   getAll: publicProcedure.query(async ({ctx}) => {
-    return ctx.db.select().from(products);
+    return await ctx.db.select().from(products);
   }),
+
+  getProduct: publicProcedure.input(z.object ({id: z.number()})).query(async ({ctx, input}) => {
+    const pro = await ctx.db.select().from(products).where(eq(products.id,input.id)).limit(1);
+		return pro ?? null;
+  })
 
 });

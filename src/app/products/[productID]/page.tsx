@@ -13,27 +13,27 @@ import FAQ from 'src/app/_components/faq';
 import React from 'react';
 import SecondNav from 'src/app/_components/secondnav';
 import { scale } from 'framer-motion';
-//import { useRef } from "react";
+import { api } from 'src/trpc/react';
+import { products } from 'src/server/db/schema';
+import type { InferSelectModel } from 'drizzle-orm';
+import { db } from 'src/server/db';
+import { eq } from 'drizzle-orm';
 
 
-
-export default function ProductDetails({ params }: { params: Promise<{ productID: string}> }) //productID corresponds with folder name
-{   
-    const products = use(params);
-    const id = products.productID;
-
-    const product = productsArray.find( p => Number(p.id) === Number(id));
-
+export default async function ProductDetails({ params }: { params: { productID: string} }) //productID corresponds with folder name
+{       
+    const id = Number( params.productID);
+    const [product] = await db.select().from(products).where(eq(products.id , id))
+    
     if (!product) {
         notFound();
     }
-
     return ( 
         <div className="scroll-smooth overflow-auto" >
             <div className="relative h-50 md:h-125 overflow-hidden rounded-b-3xl mx-2 md:mx-25 mt-5">
                 <div className=" absolute inset-0 bg-[url(https://dwqsg9sdff.ufs.sh/f/RtbpbkCLpXS4E9aYdDOsNVcqJw6uWH5UQskDALPYxZa2zRo0)] bg-cover bg-[position:50%_39%] flex items-end md:p-30 text-white font-black rounded-b-3xl transition-transform duration-500 hover:scale-110 active:scale-110">
                     <div className = "flex items-center md:items-end absolute inset-0 bg-black/50 rounded-b-3xl opacity-0 hover:opacity-100 active:opacity-100 p-5 md:p-30"> 
-                        <h1 className = "font-extrabold text-3xl text-white">{product.name}</h1>
+                        <h1 className = "font-extrabold text-3xl text-white">{product.product_name}</h1>
                     </div>    
                 </div>
             </div>
@@ -41,7 +41,7 @@ export default function ProductDetails({ params }: { params: Promise<{ productID
             <div id= "technical" className="grid md:flex mx-2 md:mx-40 justify-evenly">
                 <div className="  flex flex-col items-center md:justify-evenly">
                     <div>
-                        <img src= {product.image} className="scale-[150%]"></img>
+                        <img src= {product.image!} className="scale-[150%]"></img>
                     </div>
                     <div className=" flex flex-col items-left gap-6">
                         <div className=''>
@@ -64,11 +64,11 @@ export default function ProductDetails({ params }: { params: Promise<{ productID
                                 <h1 className="text-xl md:text-4xl font-black ">Specification</h1>
                             </div>
                             <div className="flex flex-col gap-3 text-xl">
-                                <IconHeader path="/assets/icons/hexagon.svg" w={20} h={4} lines={product.materials} headerfont="font-medium md:font-semibold" font="text-xs md:text-xl" >Materials</IconHeader>
-                                <IconHeader path="/assets/icons/move.svg" w={20} h={30} lines={product.enclosure_dimensions} headerfont="font-medium md:font-semibold" font="text-xs md:text-xl">Enclosure Dimensions</IconHeader>
-                                <IconHeader path="/assets/icons/git-commit.svg" w={20} h={30} lines={product.charge_protocol} headerfont="font-medium md:font-semibold" font="text-xs md:text-xl">Charge Protocol</IconHeader>
-                                <IconHeader path="/assets/icons/zap.svg" w={20} h={30} lines={product.input_voltage} headerfont="font-medium md:font-semibold" font="text-xs md:text-xl">Input Voltage</IconHeader>
-                                <IconHeader path="/assets/icons/shield2.svg" w={20} h={30} lines={product.protection} headerfont="font-medium md:font-semibold" font="text-xs md:text-xl">Protection</IconHeader>
+                                <IconHeader path="/assets/icons/hexagon.svg" w={20} h={4} lines={product.materials!.split(',')} headerfont="font-medium md:font-semibold" font="text-xs md:text-xl" >Materials</IconHeader>
+                                <IconHeader path="/assets/icons/move.svg" w={20} h={30} lines={product.enclosure_dimensions!.split(',')} headerfont="font-medium md:font-semibold" font="text-xs md:text-xl">Enclosure Dimensions</IconHeader>
+                                <IconHeader path="/assets/icons/git-commit.svg" w={20} h={30} lines={product.charge_protocol!.split(',')} headerfont="font-medium md:font-semibold" font="text-xs md:text-xl">Charge Protocol</IconHeader>
+                                <IconHeader path="/assets/icons/zap.svg" w={20} h={30} lines={product.input_voltage!.split(',')} headerfont="font-medium md:font-semibold" font="text-xs md:text-xl">Input Voltage</IconHeader>
+                                <IconHeader path="/assets/icons/shield2.svg" w={20} h={30} lines={product.protection!.split(',')} headerfont="font-medium md:font-semibold" font="text-xs md:text-xl">Protection</IconHeader>
                             </div>
                         </div>
                     </div>
