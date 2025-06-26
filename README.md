@@ -14,7 +14,7 @@ This project is a full-stack EV charger catalog for Rolec, built as a learning p
 - **Product Catalog**: Display all Rolec EV chargers with detailed specs
 - **Dynamic Routing**: Each charger has its own dedicated page
 - **Real-time Data**: tRPC API endpoints for fetching/writing data
-- **Modern UI**: Custom components + Rolec-UI + Material UI
+- **Modern UI**: Custom components + [Rolec-UI](https://rolec-ui.vercel.app/?path=/docs/components-assets-icon-icons--docs) + [Material UI](https://mui.com/material-ui/)
 - **Image Uploads**: Integrated with Uploadthing
 - **Database**: Turso (SQLite) with Drizzle ORM
 
@@ -32,4 +32,5 @@ This project is a full-stack EV charger catalog for Rolec, built as a learning p
 | Deployment     | Vercel                 |
 | Authentication | Next-Auth              |
 
-## 🏗 Project Structure
+Developed during the Rolec Internship Program | 2025
+
