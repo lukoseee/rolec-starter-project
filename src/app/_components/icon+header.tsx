@@ -14,14 +14,15 @@ export default function IconHeader( {children, path, h, w, lines = [], font, hea
 {   
     
     return (
-        <div className="flex gap-0 md:gap-1">
-            <div className="pt-0.5 md:pt-1 m-0 ">
-                <img src={path} className= {`object-fit ${override}`}  ></img>
-            </div>
-            <div className="p-0 m-0 ">   
-                <h1 className={headerfont}>{children}</h1>
-                {lines.map( (line,index) => <p className = {font} key={index}>{line}</p>)}
-            </div>
+    <div className="flex items-start gap-1"> {/* Changed to items-start */}
+      <img src={path} className={`self-baseline ${override}`}  alt="Icon" />
+      <div className="flex flex-col">
+        <div className="flex items-baseline"> 
+          <h1 className={headerfont}>{children}</h1>
         </div>
-    )
+        {lines.map((line, index) => (<p className={font} key={index}>{line}</p>))}
+      </div>
+    </div>
+  );
 }
+

@@ -1,9 +1,5 @@
 'use client'
 import * as React from 'react';
-import Breadcrumbs from '@mui/material/Breadcrumbs';
-import Typography from '@mui/material/Typography';
-import Stack from '@mui/material/Stack';
-import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 
@@ -14,7 +10,7 @@ export default function CustomSeparator() {
   
     return (
 
-    <nav className="flex items-center text-gray-400 capitalize text-[13px] sm:text-lg">
+    <nav className="flex items-center text-gray-400 capitalize text-[13px] lg:text-lg">
       <Link href="/" className="hover:underline">Home</Link>
 
       {segments.map((segment, index) => {

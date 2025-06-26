@@ -12,9 +12,9 @@ export default function VideoPlayer()
     if (!isHydrated) return null;
 
     return (
-        <><div className="text-2xl flex justify-center md:justify-start md:text-4xl font-black ">
+        <><div className="text-2xl flex justify-center lg:justify-start lg:text-4xl font-black ">
             <h1>Watch and Learn</h1>
-        </div><div className="h-50 md:h-200">
+        </div><div className="h-50 lg:h-200">
                 <ReactPlayer url='https://www.youtube.com/watch?v=LXb3EKWsInQ' width='100%' height='100%' />
             </div></>
     )
