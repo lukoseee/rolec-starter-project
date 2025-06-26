@@ -29,13 +29,13 @@ export default async function Home() {
     <HydrateClient>
       <main className= "grid grid-cols-1 bg-[#F6F6F6]">
         
-        <div className="px-2 sm:px-25">
+        <div className="px-2 sm:px-42">
           <BannerSection/>
         </div>
          <CatergoryBar /> 
         <div>
           <div className="mx-2 md:mx-68 mt-5">
-            <Banner classname = "bg-cover bg-[position:50%_39%] h-60 md:h-100 text-xs"  text1=" Morbi rutrum velit sed mollis ornare. Donec viverra" text2="eleifend mi, vel laoreet lorem ut nisi faucibus" button="Lets have a chat!">Topone</Banner>
+            <Banner classname = "bg-cover bg-[position:50%_39%] h-60 md:h-100 text-xs md:text-lg"  text1=" Morbi rutrum velit sed mollis ornare. Donec viverra" text2="eleifend mi, vel laoreet lorem ut nisi faucibus" button="Lets have a chat!">Topone</Banner>
           </div>
         </div>
         <div className="mx-2 md:mx-68 mt-5 gap-5 grid md:flex ">

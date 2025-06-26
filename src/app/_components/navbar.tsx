@@ -7,17 +7,10 @@ import { useEffect, useState } from "react";
 function NavBar(){
     
     const path = usePathname();
-    const [clicked, setClicked] = useState("Example");
-
-    useEffect( () => {
-        if(path.includes("/products")){
-            setClicked("Knowledge Base")
-        }else {
-            setClicked("Example");
-        }
-    }, [path]);
-
+   
     if (!path) return null;
+
+    const isProductsPage = path.includes("/products");
 
     return (
         <nav className = "flex justify-between sm:justify-start items-center bg-white text-black sm:gap-20">
@@ -25,9 +18,9 @@ function NavBar(){
                 <img src = {"/assets/logo/Logo.svg"} width={150} height={20} className=""/>
             </Button>
             <div className="navbar-center">
-                <div className="flex list-none m-0 p-5 sm:p-0 gap-2 sm:gap-15 text-xs sm:text-xl">
-                    <a href="/products" className= {`hover:font-extrabold ${clicked === "Knowledge Base" ? 'font-extrabold' : ''}`} onClick={()=>setClicked("Knowledge Base")}> Knowledge Base </a>
-                    <a href="/" className={`hover:font-extrabold ${clicked === "Example" ? 'font-extrabold' : ''}`} onClick={()=>setClicked("Example")}> Example </a>
+                <div className=" flex list-none m-0 px-5 sm:px-0 gap-2 sm:gap-15 text-xs sm:text-xl">
+                    <a href="/" className={` py-1 sm:py-4 hover:border-b-2 border-[#98D348] ${!isProductsPage ? 'border-b-2 border-[#98D348]' : ''}`} > Example </a>
+                    <a href="/products" className= {`py-1 sm:py-4 hover:border-b-2 border-[#98D348] ${isProductsPage ? 'border-b-2 border-[#98D348]' : ''}`}> Knowledge Base </a>
                 </div>
             </div>
         </nav>

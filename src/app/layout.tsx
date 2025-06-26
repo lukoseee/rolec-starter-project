@@ -9,6 +9,7 @@ import { TRPCReactProvider } from "src/trpc/react";
 import NavBar from "./_components/navbar";
 import Footer from "./_components/footer";
 import CustomSeparator from "./_components/breadcrumb-trail";
+import IconHeader from "./_components/icon+header";
 
 export const metadata: Metadata = {
   title: "Create T3 App",
@@ -33,13 +34,17 @@ export default function RootLayout({
     <html lang="en" className={`${mainFont.className } `} >
       <meta name="viewport"/>
       <body className="bg-[#F6F6F6] m-0 p-0">
-        <div className="flex items-center bg-white w-full sm:pl-25 m-0 p-0 h-20">
-          <div className="w-full "> 
+        <div className=" flex items-center bg-white w-full sm:pl-40 m-0 py-2 sm:py-0 sm:h-20">
+          <div className="w-full"> 
             <NavBar/>
           </div>
         </div> 
-         <div className="my-5 sm:mx-28 mx-5">
+         <div className="my-2 sm:mx-42 sm:my-5 mx-5 flex justify-between">
             <CustomSeparator></CustomSeparator>
+            <div className="flex flex-wrap gap-1 md:gap-4 items-center text-gray-400">
+              <p className="text-[6px] md:text-lg md:font-semibold">Next Training:</p>
+              <IconHeader path={"/assets/icons/calendar.svg"} override= { " h-1 w-3 md:h-5 md:w-10"} headerfont="text-[6px] md:text-lg  text-[#74AF28]">    15 April 2024    Rolec R&D, Nottingham</IconHeader>
+            </div>
         </div>
 
         {

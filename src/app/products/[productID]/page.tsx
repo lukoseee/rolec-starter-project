@@ -29,8 +29,8 @@ export default async function ProductDetails({ params }: { params: { productID: 
         notFound();
     }
     return ( 
-        <div className="scroll-smooth overflow-auto" >
-            <div className="relative h-50 md:h-125 overflow-hidden rounded-b-3xl mx-2 md:mx-25 mt-5">
+        <div className="overflow-invisble md:overflow-auto" >
+            <div className="relative h-30 md:h-125 overflow-hidden rounded-b-3xl mx-2 md:mx-40 mt-0">
                 <div className=" absolute inset-0 bg-[url(https://dwqsg9sdff.ufs.sh/f/RtbpbkCLpXS4E9aYdDOsNVcqJw6uWH5UQskDALPYxZa2zRo0)] bg-cover bg-[position:50%_39%] flex items-end md:p-30 text-white font-black rounded-b-3xl transition-transform duration-500 hover:scale-110 active:scale-110">
                     <div className = "flex items-center md:items-end absolute inset-0 bg-black/50 rounded-b-3xl opacity-0 hover:opacity-100 active:opacity-100 p-5 md:p-30"> 
                         <h1 className = "font-extrabold text-3xl text-white">{product.product_name}</h1>

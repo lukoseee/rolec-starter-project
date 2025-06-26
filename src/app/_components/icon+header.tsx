@@ -6,16 +6,17 @@ type IconHeaderType = {children: React.ReactNode;
                        lines?: string[];
                        headerfont?: string;
                        font?: string;
+                       override?: string;
 
  }
 
-export default function IconHeader( {children, path, h, w, lines = [], font, headerfont} : IconHeaderType)
+export default function IconHeader( {children, path, h, w, lines = [], font, headerfont , override} : IconHeaderType)
 {   
     
     return (
-        <div className="flex gap-2">
-            <div className="pt-0.5 md:pt-1.5 m-0 ">
-                <img src={path} className="object-fit" ></img>
+        <div className="flex gap-0 md:gap-1">
+            <div className="pt-0.5 md:pt-1 m-0 ">
+                <img src={path} className= {`object-fit ${override}`}  ></img>
             </div>
             <div className="p-0 m-0 ">   
                 <h1 className={headerfont}>{children}</h1>
