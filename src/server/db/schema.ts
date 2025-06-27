@@ -3,6 +3,7 @@
 
 import { sql } from "drizzle-orm";
 import { index, sqliteTableCreator } from "drizzle-orm/sqlite-core";
+import { d } from "node_modules/drizzle-kit/index-BAUrj6Ib.mjs";
 
 /**
  * This is an example of how to use the multi-project schema feature of Drizzle ORM. Use the same
@@ -34,4 +35,12 @@ export const products = createTable(
     updatedAt: d.integer({ mode: "timestamp" }).$onUpdate(() => new Date()),
   }),
   (t) => [index("name_idx").on(t.product_name)],
+);
+
+export const emails = createTable(
+  "Emails",
+  (d) => ({
+    id:  d.integer({mode:"number"}).primaryKey({autoIncrement: true}),
+    email: d.text().notNull().unique()
+  }),
 );

@@ -2,6 +2,7 @@ import { z } from "zod";
 
 import { createTRPCRouter, publicProcedure } from "src/server/api/trpc";
 import { products } from "src/server/db/schema";
+import { emails } from "src/server/db/schema";
 import { eq } from "drizzle-orm";
 export const postRouter = createTRPCRouter({
   hello: publicProcedure
@@ -13,18 +14,10 @@ export const postRouter = createTRPCRouter({
     }),
 
   create: publicProcedure
-    .input(z.object({ name: z.string().min(1), image: z.string().min(1),  kind: z.string().min(1),  description: z.string().min(1),  materials: z.string().min(1),  enclosure_dimensions: z.string().min(1), charge_protocol: z.string().min(1),  input_voltage: z.string().min(1), protection: z.string().min(1),},))
+    .input(z.object({ text: z.string()}))
     .mutation(async ({ ctx, input }) => {
-      await ctx.db.insert(products).values({
-        product_name: input.name,
-				image: input.image,
-        kind: input.kind,
-        description: input.description,
-        materials: input.materials,
-        enclosure_dimensions: input.enclosure_dimensions,
-        charge_protocol: input.charge_protocol,
-        input_voltage: input.input_voltage,
-        protection: input.protection,
+      await ctx.db.insert(emails).values({
+        email: input.text
       });
     }),
 
@@ -32,7 +25,6 @@ export const postRouter = createTRPCRouter({
     const post = await ctx.db.query.products.findFirst({
       orderBy: (products, { desc }) => [desc(products.createdAt)],
     });
-
     return post ?? null;
   }),
 

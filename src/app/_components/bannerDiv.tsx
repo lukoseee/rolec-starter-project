@@ -1,4 +1,3 @@
-import bg from "public/assets/banner.png";
 
 function BannerSection(){
 
