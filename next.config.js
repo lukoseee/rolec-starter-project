@@ -11,6 +11,4 @@ const config = {
     images: {remotePatterns: [ {hostname: 'dwqsg9sdff.ufs.sh'} ]}
 };
 
-
-
 export default config;

@@ -23,6 +23,11 @@ function NavBar(){
                     <a href="/products" className= {`py-1 lg:py-4 hover:border-b-2 border-[#98D348] ${isProductsPage ? 'border-b-2 border-[#98D348]' : ''}`}> Knowledge Base </a>
                 </div>
             </div>
+            <div className="pr-1 pl-0 lg:pl-220">
+                <Button href= "/account">
+                    <img src="/assets/icons/profileimg.png" className="w-7 h-7 lg:w-10 lg:h-10 rounded-4xl"></img>
+                </Button>
+            </div>
         </nav>
     )
 }

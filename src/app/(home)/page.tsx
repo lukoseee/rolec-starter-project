@@ -1,5 +1,5 @@
 import { HydrateClient } from "src/trpc/server";
-import BannerSection from "./_components/bannerDiv";
+import BannerSection from "src/app/_components/bannerDiv";
 import CatergoryBar from "src/app/_components/categorybar";
 import Bannerf from "src/app/_components/banner";
 

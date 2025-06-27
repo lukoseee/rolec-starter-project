@@ -6,10 +6,10 @@ import { Geist } from "next/font/google";
 import {Montserrat} from "next/font/google";
 
 import { TRPCReactProvider } from "src/trpc/react";
-import NavBar from "./_components/navbar";
-import Footer from "./_components/footer";
-import CustomSeparator from "./_components/breadcrumb-trail";
-import IconHeader from "./_components/icon+header";
+import NavBar from "../_components/navbar";
+import Footer from "../_components/footer";
+import CustomSeparator from "src/app/_components/breadcrumb-trail";
+import IconHeader from "../_components/icon+header";
 
 export const metadata: Metadata = {
   title: "Rolec - Knowledge Base",
@@ -41,10 +41,6 @@ export default function RootLayout({
         </div> 
          <div className="my-2 lg:mx-42 lg:my-5 mx-5 flex justify-between">
             <CustomSeparator></CustomSeparator>
-            <div className="flex flex-wrap gap-1 lg:gap-4 items-center text-gray-400">
-              <p className="text-[6px] lg:text-lg lg:font-semibold">Next Training:</p>
-              <IconHeader path={"/assets/icons/calendar.svg"} override= { " h-1 w-3 lg:h-5 lg:w-10"} headerfont="text-[6px] lg:text-lg  text-[#74AF28]">    15 April 2024    Rolec R&D, Nottingham</IconHeader>
-            </div>
         </div>
 
         {
