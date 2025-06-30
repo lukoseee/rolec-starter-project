@@ -8,7 +8,7 @@ export default async function Home() {
   return (
     <HydrateClient>
       <main className= "grid grid-cols-1 bg-[#F6F6F6]">
-        <div className="px-2 lg:px-42">
+        <div className="px-2 lg:px-42 ">
           <BannerSection/>
         </div>
          <CatergoryBar /> 

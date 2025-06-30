@@ -18,8 +18,8 @@ export default function RootLayout({
   return (
     <html lang="en" >
       <meta name="viewport"/>
-      <body className="flex flex-col items-center">
-        <div className="border rounded-3xl w-lg grid bg-[#F6F6F6] ">
+      <body className="flex flex-col items-center ">
+        <div className="border rounded-3xl w-lg grid bg-[#F6F6F6] mt-3 ">
             {<TRPCReactProvider>{children}</TRPCReactProvider>}
             <LoginFooter label="Don't have an account?" link="Sign Up"></LoginFooter>
         </div>

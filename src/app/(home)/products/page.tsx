@@ -1,4 +1,4 @@
-import CatergoryBar from "../_components/categorybar";
+import CatergoryBar from "src/app/_components/categorybar";
 
 export default function ProductList()
 {
