@@ -1,0 +1,12 @@
+
+@import "@Rolec-Services/rolec-ui/dist/style.css";
+@import "tailwindcss";
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
