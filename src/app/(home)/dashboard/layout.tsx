@@ -6,10 +6,10 @@ import { Geist } from "next/font/google";
 import {Montserrat} from "next/font/google";
 
 import { TRPCReactProvider } from "src/trpc/react";
-import NavBar from "../_components/navbar";
-import Footer from "../_components/footer";
+import NavBar from "../../_components/navbar";
+import Footer from "../../_components/footer";
 import CustomSeparator from "src/app/_components/breadcrumb-trail";
-import IconHeader from "../_components/icon+header";
+import IconHeader from "../../_components/icon+header";
 
 export const metadata: Metadata = {
   title: "Rolec - Knowledge Base",

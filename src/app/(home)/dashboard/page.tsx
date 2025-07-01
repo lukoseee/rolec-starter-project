@@ -3,7 +3,7 @@ import BannerSection from "src/app/_components/bannerDiv";
 import CatergoryBar from "src/app/_components/categorybar";
 import Bannerf from "src/app/_components/banner";
 
-export default async function Home() {
+export default async function Example() {
 
   return (
     <HydrateClient>

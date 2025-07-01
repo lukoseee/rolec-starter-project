@@ -44,3 +44,13 @@ export const emails = createTable(
     email: d.text().notNull().unique()
   }),
 );
+
+export const users = createTable(
+  "Users",
+  (d) => ( {
+    id: d.integer({mode: "number"}).primaryKey({autoIncrement: true}),
+    first: d.text().notNull(),
+    last: d.text().notNull(),
+    email: d.text().notNull().unique()
+  }),
+);

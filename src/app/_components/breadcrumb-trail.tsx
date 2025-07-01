@@ -11,14 +11,16 @@ export default function CustomSeparator() {
     return (
 
     <nav className="flex items-center text-gray-400 capitalize text-[13px] lg:text-lg">
-      <Link href="/" className="hover:underline">Home</Link>
+      <Link href="/dashboard" className="hover:underline">Dashboard</Link>
 
-      {segments.map((segment, index) => {
-        const href = `/${segments.slice(0, index + 1).join('/')}`;
-        const isLast = index === segments.length - 1;
+
+      {segments.slice(1).map((segment, index)=> {
+        const og = index+1;
+        const href = `/${segments.slice(0, og+1).join('/')}`;
+        const isLast = og === segments.length - 1;
 
         return (
-          <span key={index} className="flex items-center ">
+          <span key={og} className="flex items-center ">
             <span className="mx-2">&gt;</span>
             {!isLast ? (
               <Link href={href} className="hover:underline ">{segment}</Link>) : (<span > {segment}</span>

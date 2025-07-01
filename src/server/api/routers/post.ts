@@ -1,9 +1,10 @@
 import { z } from "zod";
 
 import { createTRPCRouter, publicProcedure } from "src/server/api/trpc";
-import { products } from "src/server/db/schema";
+import { products, users } from "src/server/db/schema";
 import { emails } from "src/server/db/schema";
 import { eq } from "drizzle-orm";
+import { error } from "console";
 export const postRouter = createTRPCRouter({
   hello: publicProcedure
     .input(z.object({ text: z.string() }))
@@ -19,6 +20,16 @@ export const postRouter = createTRPCRouter({
       await ctx.db.insert(emails).values({
         email: input.text
       });
+    }),
+
+  createUser: publicProcedure
+    .input(z.object({first: z.string(), last: z.string(), email:z.string() }))
+    .mutation(async ({ctx, input}) => {
+      await ctx.db.insert(users).values({
+        first: input.first,
+        last: input.last,
+        email: input.email
+      })
     }),
 
   getLatest: publicProcedure.query(async ({ ctx }) => {

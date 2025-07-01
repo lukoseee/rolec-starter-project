@@ -20,6 +20,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@clerk/nextjs": "^6.23.2",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
     "@libsql/client": "^0.14.0",

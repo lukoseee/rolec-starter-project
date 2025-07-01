@@ -1,8 +1,15 @@
 import type { Metadata } from "next";
 import LoginFooter from "src/app/_components/loginfooter";
 import { TRPCReactProvider } from "src/trpc/react"; 
-import "src/styles/login.css"
-
+import "src/styles/login.css";
+import {
+  ClerkProvider,
+  SignInButton,
+  SignUpButton,
+  SignedIn,
+  SignedOut,
+  UserButton,
+} from '@clerk/nextjs';
 
 
 export const metadata: Metadata = {
@@ -16,14 +23,13 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" >
-      <meta name="viewport"/>
-      <body className="flex flex-col items-center ">
-        <div className="border rounded-3xl w-lg grid bg-[#F6F6F6] mt-3 ">
-            {<TRPCReactProvider>{children}</TRPCReactProvider>}
-            <LoginFooter label="Don't have an account?" link="Sign Up"></LoginFooter>
-        </div>
-      </body>
-    </html>
+    <ClerkProvider>
+        <html lang="en" >
+          <meta name="viewport"/>
+          <body className="flex flex-col items-center ">
+                {<TRPCReactProvider>{children}</TRPCReactProvider>}
+          </body>
+        </html>
+    </ClerkProvider>
   );
 }
