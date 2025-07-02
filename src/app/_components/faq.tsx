@@ -8,9 +8,7 @@ import MuiAccordionSummary, {
 import MuiAccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import React, { useEffect, useState } from 'react';
-
-
+import React, {  } from 'react';
 
 const Accordion = styled((props: AccordionProps) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />))(({ theme }) => ({ typography: {fontFamily:'-apple-system'}, fontSize: '50', border: 'none', 
@@ -42,12 +40,6 @@ export default function FAQ()
     (panel: string) => (event: React.SyntheticEvent, newExpanded: boolean) => {
       setExpanded(newExpanded ? panel : false);
     };
-
-    const [isHydrated, setIsHydrated] = useState(false);
-    
-    useEffect(() => {setIsHydrated(true);}, []);
-    
-    if (!isHydrated) return null;
 
     return (
         <><Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>

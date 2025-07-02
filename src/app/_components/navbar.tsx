@@ -1,7 +1,6 @@
 'use client'
 import Button from "@mui/material/Button"
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
 
 
 function NavBar(){

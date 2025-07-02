@@ -1,7 +1,7 @@
 'use client'
 import { Button, InputBox } from "@Rolec-Services/rolec-ui";
 import { redirect } from "next/navigation";
-import { useEffect, useState, type FormEvent } from "react";
+import { useState, type FormEvent } from "react";
 import LoginFooter from "src/app/_components/loginfooter";
 import LoginHeader from "src/app/_components/loginheader";
 import { api } from "src/trpc/react";
@@ -20,11 +20,6 @@ export default function SignIn()
             console.log("Error:", error.message); // Handle error here
         },
     });
-    
-    // useEffect(() => {
-    //     console.log("Current errorMsg:", errorMsg); // Check if it updates
-    //     }, [errorMsg]);
-
     const handleSubmit = (e: FormEvent<HTMLFormElement>) => { e.preventDefault()
         
         switch(true) {

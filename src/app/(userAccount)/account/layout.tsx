@@ -23,13 +23,8 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <ClerkProvider>
-        <html lang="en" >
-          <meta name="viewport"/>
-          <body className="flex flex-col items-center ">
-                {<TRPCReactProvider>{children}</TRPCReactProvider>}
-          </body>
-        </html>
-    </ClerkProvider>
+      <div key="account-layout" className="flex flex-col items-center ">
+            {children}
+      </div>
   );
 }

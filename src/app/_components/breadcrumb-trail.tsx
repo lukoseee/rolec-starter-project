@@ -3,7 +3,6 @@ import * as React from 'react';
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 
-
 export default function CustomSeparator() {
     const location = usePathname();
     const segments = location.split("/").filter(segment => segment !== '');
@@ -12,7 +11,6 @@ export default function CustomSeparator() {
 
     <nav className="flex items-center text-gray-400 capitalize text-[13px] lg:text-lg">
       <Link href="/dashboard" className="hover:underline">Dashboard</Link>
-
 
       {segments.slice(1).map((segment, index)=> {
         const og = index+1;

@@ -31,9 +31,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${mainFont.className } `} >
-      <meta name="viewport"/>
-      <body className="bg-[#F6F6F6] m-0 p-0">
+    <div key= "dashboard-layout">
         <div className=" flex items-center bg-white w-full lg:pl-40 m-0 py-2 lg:py-0 lg:h-20">
           <div className="w-full"> 
             <NavBar/>
@@ -42,15 +40,10 @@ export default function RootLayout({
          <div className="my-2 lg:mx-42 lg:my-5 mx-5 flex justify-between">
             <CustomSeparator></CustomSeparator>
         </div>
-
-        {
-        <TRPCReactProvider>{children}</TRPCReactProvider>
-        }
-
+        {children}
         <footer className="bg-[#262626] mt-5">
           <Footer>hello</Footer>
-        </footer> 
-      </body>
-    </html>
+        </footer>
+      </div> 
   );
 }

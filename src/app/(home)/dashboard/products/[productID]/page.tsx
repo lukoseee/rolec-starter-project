@@ -8,6 +8,8 @@ import SecondNav from 'src/app/_components/secondnav';
 import { products } from 'src/server/db/schema';
 import { db } from 'src/server/db';
 import { eq } from 'drizzle-orm';
+import { HoverBanner } from "src/app/_components/bannerDiv";
+
 
 export default async function ProductDetails({ params }: { params: { productID: string} }) //productID corresponds with folder name
 {       
@@ -18,13 +20,9 @@ export default async function ProductDetails({ params }: { params: { productID: 
         notFound();
     }
     return ( 
-        <div className="overflow-invisble lg:overflow-auto" >
-            <div className="relative h-30 lg:h-125 overflow-hidden rounded-b-3xl mx-2 lg:mx-40 mt-0">
-                <div className=" absolute inset-0 bg-[url(https://dwqsg9sdff.ufs.sh/f/RtbpbkCLpXS4E9aYdDOsNVcqJw6uWH5UQskDALPYxZa2zRo0)] bg-cover bg-[position:50%_39%] flex items-end lg:p-30 text-white font-black rounded-b-3xl transition-transform duration-500 hover:scale-110 active:scale-110">
-                    <div className = "flex items-center lg:items-end absolute inset-0 bg-black/50 rounded-b-3xl opacity-0 hover:opacity-100 active:opacity-100 p-5 lg:p-30"> 
-                        <h1 className = "font-extrabold text-3xl text-white">{product.product_name}</h1>
-                    </div>    
-                </div>
+        <div className="grid grid-cols-1 bg-[#F6F6F6]" >
+            <div className="px-2 lg:px-40">
+                <HoverBanner height= "h-30 lg:h-100" positioning="items-center lg:items-end p-5 lg:p-30" image="https://dwqsg9sdff.ufs.sh/f/RtbpbkCLpXS4E9aYdDOsNVcqJw6uWH5UQskDALPYxZa2zRo0" >{product.product_name}</HoverBanner>
             </div>
             <SecondNav></SecondNav>
             <div id= "technical" className="grid lg:flex mx-2 lg:mx-40 justify-evenly">
@@ -37,11 +35,11 @@ export default async function ProductDetails({ params }: { params: { productID: 
                             <h1 className="text-xl lg:text-4xl font-black ">Downloads</h1>
                         </div>
                         <div className="flex flex-col gap-3 text-xl">
-                            <IconHeader path="/assets/icons/table-list.svg" headerfont='text-xs lg:text-xl'>Data Sheet</IconHeader>
-                            <IconHeader path="/assets/icons/tool.svg" w={25} h={30} headerfont='text-xs lg:text-xl'>Installation and Operation Manual</IconHeader>
-                            <IconHeader path="/assets/icons/Shield.svg" w={25} h={30} headerfont='text-xs lg:text-xl'>Statement Of Compliance</IconHeader>
-                            <IconHeader path="/assets/icons/FileText.svg" w={25} h={30} headerfont='text-xs lg:text-xl'>UKCA & CE Declaration of Conformity</IconHeader>
-                            <IconHeader path="/assets/icons/3D.svg" w={25} h={30} headerfont='text-xs lg:text-xl'>NBS BIM & CAD Packages</IconHeader>
+                            <IconHeader path="/assets/icons/table-list.svg" headerfont='text-lg lg:text-xl'>Data Sheet</IconHeader>
+                            <IconHeader path="/assets/icons/tool.svg" headerfont='text-lg lg:text-xl'>Installation and Operation Manual</IconHeader>
+                            <IconHeader path="/assets/icons/Shield.svg" headerfont='text-lg lg:text-xl'>Statement Of Compliance</IconHeader>
+                            <IconHeader path="/assets/icons/FileText.svg" headerfont='text-lg lg:text-xl'>UKCA & CE Declaration of Conformity</IconHeader>
+                            <IconHeader path="/assets/icons/3D.svg" headerfont='text-lg lg:text-xl'>NBS BIM & CAD Packages</IconHeader>
                         </div>
                     </div>
                 </div>
@@ -53,11 +51,11 @@ export default async function ProductDetails({ params }: { params: { productID: 
                                 <h1 className="text-xl lg:text-4xl font-black ">Specification</h1>
                             </div>
                             <div className="flex flex-col gap-3 text-xl">
-                                <IconHeader path="/assets/icons/hexagon.svg" w={20} h={4} lines={product.materials.split(',')} headerfont="font-medium lg:font-semibold" font="text-xs lg:text-xl" >Materials</IconHeader>
-                                <IconHeader path="/assets/icons/move.svg" w={20} h={30} lines={product.enclosure_dimensions.split(',')} headerfont="font-medium lg:font-semibold" font="text-xs lg:text-xl">Enclosure Dimensions</IconHeader>
-                                <IconHeader path="/assets/icons/git-commit.svg" w={20} h={30} lines={product.charge_protocol.split(',')} headerfont="font-medium lg:font-semibold" font="text-xs lg:text-xl">Charge Protocol</IconHeader>
-                                <IconHeader path="/assets/icons/zap.svg" w={20} h={30} lines={product.input_voltage.split(',')} headerfont="font-medium lg:font-semibold" font="text-xs lg:text-xl">Input Voltage</IconHeader>
-                                <IconHeader path="/assets/icons/shield2.svg" w={20} h={30} lines={product.protection.split(',')} headerfont="font-medium lg:font-semibold" font="text-xs lg:text-xl">Protection</IconHeader>
+                                <IconHeader path="/assets/icons/hexagon.svg" lines={product.materials.split(',')} headerfont="font-medium lg:font-semibold" font="text-xs lg:text-xl" >Materials</IconHeader>
+                                <IconHeader path="/assets/icons/move.svg" lines={product.enclosure_dimensions.split(',')} headerfont="font-medium lg:font-semibold" font="text-xs lg:text-xl">Enclosure Dimensions</IconHeader>
+                                <IconHeader path="/assets/icons/git-commit.svg" lines={product.charge_protocol.split(',')} headerfont="font-medium lg:font-semibold" font="text-xs lg:text-xl">Charge Protocol</IconHeader>
+                                <IconHeader path="/assets/icons/zap.svg" lines={product.input_voltage.split(',')} headerfont="font-medium lg:font-semibold" font="text-xs lg:text-xl">Input Voltage</IconHeader>
+                                <IconHeader path="/assets/icons/shield2.svg" lines={product.protection.split(',')} headerfont="font-medium lg:font-semibold" font="text-xs lg:text-xl">Protection</IconHeader>
                             </div>
                         </div>
                     </div>
@@ -76,6 +74,7 @@ export default async function ProductDetails({ params }: { params: { productID: 
             <div id='videos' className="mx-2 mt-10 lg:mt-25 lg:mx-40 flex flex-col gap-5 lg:gap-10 ">
                 <VideoPlayer></VideoPlayer>
             </div>
+            
             <div id='articles' className="mt-3 lg:mt-15 lg:mx-25 flex flex-col gap-3 lg:gap-6">
                 <div className="text-2xl flex justify-center lg:justify-start lg:text-4xl lg:mx-40 font-black">
                     <h1>Related Articles</h1>

@@ -1,15 +1,15 @@
 import { HydrateClient } from "src/trpc/server";
-import BannerSection from "src/app/_components/bannerDiv";
 import CategoryBar from "src/app/_components/categorybar";
 import Bannerf from "src/app/_components/banner";
+import { HoverBanner } from "src/app/_components/bannerDiv";
 
 export default async function Example() {
 
   return (
     <HydrateClient>
       <main className= "grid grid-cols-1 bg-[#F6F6F6]">
-        <div className="px-2 lg:px-42 ">
-          <BannerSection/>
+        <div className="px-2 lg:px-42">
+          <HoverBanner height=" h-25 lg:h-70" positioning="justify-center items-center" image="https://dwqsg9sdff.ufs.sh/f/RtbpbkCLpXS4kzAojPgO3hRV9H8goyiFtc6z2sIl1juaqweG">Knowledge Base</HoverBanner>
         </div>
          <CategoryBar /> 
         <div>

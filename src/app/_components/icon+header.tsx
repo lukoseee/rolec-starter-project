@@ -1,8 +1,6 @@
 
 type IconHeaderType = {children: React.ReactNode;
                        path: string;
-                       w?: number;
-                       h?: number; 
                        lines?: string[];
                        headerfont?: string;
                        font?: string;
@@ -10,12 +8,12 @@ type IconHeaderType = {children: React.ReactNode;
 
  }
 
-export default function IconHeader( {children, path, h, w, lines = [], font, headerfont , override} : IconHeaderType)
+export default function IconHeader( {children, path, lines = [], font, headerfont , override} : IconHeaderType)
 {   
     
     return (
     <div className="flex items-start gap-1"> {/* Changed to items-start */}
-      <img src={path} className={`self-baseline ${override}`}  alt="Icon" />
+      <img src={path} className={`py-2 self-baseline ${override}`}  alt="Icon" />
       <div className="flex flex-col">
         <div className="flex items-baseline"> 
           <h1 className={headerfont}>{children}</h1>

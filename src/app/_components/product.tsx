@@ -16,6 +16,6 @@ const Product = ({children,  path="" , link} : ProductProps) => (
                 </Link>
                 <h1 className="text-xs lg:font-extrabold lg:text-lg ">{children}</h1>
         </div>
-        )
+    )
 
 export default Product

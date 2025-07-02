@@ -54,7 +54,6 @@ const Footer =( ({children}: FooterProps)=> (
                     <p>Catalogues</p>
                     <p>Terms & Conditions</p>
                     <p>Other Policies</p>
-
                 </div>
             </div>
         </div>
