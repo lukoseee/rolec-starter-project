@@ -1,6 +1,6 @@
 import { HydrateClient } from "src/trpc/server";
 import BannerSection from "src/app/_components/bannerDiv";
-import CatergoryBar from "src/app/_components/categorybar";
+import CategoryBar from "src/app/_components/categorybar";
 import Bannerf from "src/app/_components/banner";
 
 export default async function Example() {
@@ -11,7 +11,7 @@ export default async function Example() {
         <div className="px-2 lg:px-42 ">
           <BannerSection/>
         </div>
-         <CatergoryBar /> 
+         <CategoryBar /> 
         <div>
           <div className="mx-2 lg:mx-68 mt-5">
             <Bannerf classname = "bg-cover bg-[position:50%_39%] h-60 lg:h-100 text-xs lg:text-lg"  text1=" Morbi rutrum velit sed mollis ornare. Donec viverra" text2="eleifend mi, vel laoreet lorem ut nisi faucibus" button="Lets have a chat!">Topone</Bannerf>

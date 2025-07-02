@@ -21,7 +21,6 @@ export default function SignIn()
         },
     });
     
-
     // useEffect(() => {
     //     console.log("Current errorMsg:", errorMsg); // Check if it updates
     //     }, [errorMsg]);
