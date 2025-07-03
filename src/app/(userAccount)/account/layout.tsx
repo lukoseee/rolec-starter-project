@@ -23,7 +23,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-      <div key="account-layout" className="flex flex-col items-center ">
+      <div className="flex flex-col items-center ">
             {children}
       </div>
   );

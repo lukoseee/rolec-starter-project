@@ -1,15 +1,9 @@
 import "src/styles/globals.css";
 
 import { type Metadata } from "next";
-import { Geist } from "next/font/google";
-
-import {Montserrat} from "next/font/google";
-
-import { TRPCReactProvider } from "src/trpc/react";
 import NavBar from "../../_components/navbar";
 import Footer from "../../_components/footer";
 import CustomSeparator from "src/app/_components/breadcrumb-trail";
-import IconHeader from "../../_components/icon+header";
 
 export const metadata: Metadata = {
   title: "Rolec - Knowledge Base",
@@ -17,33 +11,23 @@ export const metadata: Metadata = {
   icons: [{ rel: "icon", url: "/r.svg" }],
 };
 
-const geist = Geist({
-  subsets: ["latin"],
-  variable: "--font-geist-sans",
-});
-
-const mainFont = Montserrat({
-  subsets: ["latin"],
-  weight: "400",
-});
-
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <div key= "dashboard-layout">
-        <div className=" flex items-center bg-white w-full lg:pl-40 m-0 py-2 lg:py-0 lg:h-20">
-          <div className="w-full"> 
-            <NavBar/>
+      <div key= "dashboard-layout">
+          <div className=" flex items-center bg-white w-full lg:pl-40 m-0 py-2 lg:py-0 lg:h-20">
+            <div className="w-full"> 
+              <NavBar/>
+            </div>
+          </div> 
+          <div className="my-2 lg:mx-42 lg:my-5 mx-5 flex justify-between">
+              <CustomSeparator></CustomSeparator>
           </div>
-        </div> 
-         <div className="my-2 lg:mx-42 lg:my-5 mx-5 flex justify-between">
-            <CustomSeparator></CustomSeparator>
+          {children}
+          <footer className="bg-[#262626] mt-5">
+            <Footer>hello</Footer>
+          </footer>
         </div>
-        {children}
-        <footer className="bg-[#262626] mt-5">
-          <Footer>hello</Footer>
-        </footer>
-      </div> 
   );
 }

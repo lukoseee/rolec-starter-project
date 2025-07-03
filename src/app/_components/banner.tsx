@@ -55,8 +55,11 @@ export default function Bannerf({children, classname="", path = "https://dwqsg9s
                 <div >
                     <form className="flex gap-2 " onSubmit={handleSubmit}>
                         <div>
-                            {formfield && <InputBox value = {inputValue} onChange = { (e) => setInput(e.target.value)} className= {""} guidance={{children: ''}} label={{children: ''}} placeholder="Email address" toolTip={{ children: '', trigger: ''}}/>}
-                            <p>{ `${errorMsg}`}</p>
+                            {formfield && 
+                                <>
+                                    <InputBox value={inputValue} onChange={(e) => setInput(e.target.value)} className={""} guidance={{ children: '' }} label={{ children: '' }} placeholder="Email address" toolTip={{ children: '', trigger: '' }} />
+                                    <p>{`${errorMsg}`}</p>
+                                </> }
                         </div>
                         <Button className="bg-[#74AF28] rounded-xl p-2 hover:opacity-90" size="lg" variant="primary" type="submit" >{button}</Button> 
                     </form>                     
