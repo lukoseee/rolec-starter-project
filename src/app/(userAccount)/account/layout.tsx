@@ -3,12 +3,7 @@ import LoginFooter from "src/app/_components/loginfooter";
 import { TRPCReactProvider } from "src/trpc/react"; 
 import "src/styles/login.css";
 import {
-  ClerkProvider,
-  SignInButton,
-  SignUpButton,
-  SignedIn,
-  SignedOut,
-  UserButton,
+  SignIn
 } from '@clerk/nextjs';
 
 
@@ -23,7 +18,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-      <div className="flex flex-col items-center ">
+      <div className="flex flex-col items-center">
             {children}
       </div>
   );

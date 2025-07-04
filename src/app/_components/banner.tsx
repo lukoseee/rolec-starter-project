@@ -26,7 +26,7 @@ export default function Bannerf({children, classname="", path = "https://dwqsg9s
     const[errorMsg , setMsg]  = useState("");
     const regex = new RegExp('[a-z0-9]+@[a-z]+\.[a-z]{2,3}');
 
-    const createEmail = api.post.create.useMutation();
+    const createEmail = api.product.create.useMutation();
 
     const handleSubmit =  (e: FormEvent<HTMLFormElement>) => { e.preventDefault()
         if(regex.test(inputValue)){

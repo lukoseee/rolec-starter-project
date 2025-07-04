@@ -1,4 +1,5 @@
 'use client'
+import { SignedIn, UserButton } from "@clerk/nextjs";
 import Button from "@mui/material/Button"
 import { usePathname } from "next/navigation";
 
@@ -23,9 +24,9 @@ function NavBar(){
                 </div>
             </div>
             <div className="pr-1 pl-0 lg:pl-220">
-                <Button href= "/account">
-                    <img src="/assets/icons/profileimg.png" className="w-7 h-7 lg:w-10 lg:h-10 rounded-4xl"></img>
-                </Button>
+                <SignedIn>
+                    <UserButton></UserButton>
+                </SignedIn>
             </div>
         </nav>
     )

@@ -12,7 +12,7 @@ function CategoryBar() {
 
 	//Gets all products via api query   
 	const [active, setActive] = useState<Category>("All");
-	const {data: Products, isLoading} = api.post.getAll.useQuery();
+	const {data: Products, isLoading} = api.product.getAll.useQuery();
 
 	const handleBtns = (word: Category) => {
 		setActive(word);
