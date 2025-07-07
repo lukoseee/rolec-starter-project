@@ -9,6 +9,7 @@ import { products } from 'src/server/db/schema';
 import { db } from 'src/server/db';
 import { eq } from 'drizzle-orm';
 import { HoverBanner } from "src/app/_components/bannerDiv";
+import Image from "next/image";
 
 
 export default async function ProductDetails({ params }: { params: { productID: string} }) //productID corresponds with folder name
@@ -28,7 +29,7 @@ export default async function ProductDetails({ params }: { params: { productID: 
             <div id= "technical" className="grid lg:flex mx-2 lg:mx-40 justify-evenly">
                 <div className="  flex flex-col items-center lg:justify-evenly">
                     <div>
-                        <img src= {product.image} className="scale-[150%]"></img>
+                        <Image alt="ProductImage" width={200} height = {250} src= {product.image} className="scale-[150%]"></Image>
                     </div>
                     <div className=" flex flex-col items-left gap-6">
                         <div className=''>
