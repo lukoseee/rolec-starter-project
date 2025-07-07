@@ -4,6 +4,7 @@ import { type Metadata } from "next";
 import NavBar from "../../_components/navbar";
 import Footer from "../../_components/footer";
 import CustomSeparator from "src/app/_components/breadcrumb-trail";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata: Metadata = {
   title: "Rolec - Knowledge Base",
@@ -25,6 +26,7 @@ export default function RootLayout({
               <CustomSeparator></CustomSeparator>
           </div>
           {children}
+          <SpeedInsights />
           <footer className="bg-[#262626] mt-5">
             <Footer>hello</Footer>
           </footer>

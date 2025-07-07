@@ -5,6 +5,7 @@ import "src/styles/login.css";
 import {
   SignIn
 } from '@clerk/nextjs';
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 
 export const metadata: Metadata = {
@@ -20,6 +21,7 @@ export default function RootLayout({
   return (
       <div className="flex flex-col items-center">
             {children}
+            <SpeedInsights />
       </div>
   );
 }
