@@ -33,28 +33,28 @@ export default function SignIn()
     const handleSubmit = async (e: FormEvent<HTMLFormElement>) => { e.preventDefault()
         
         try{
-
-            await createUser.mutateAsync({email:formData.email, firstName:formData.firstName , lastName:formData.lastName}, {onSuccess:  () => {
-			setFormData({...formData, errorMsg: ""})
-		} } ) ;
+            await createUser.mutateAsync( { email:formData.email, firstName:formData.firstName , lastName:formData.lastName }, {onSuccess:  () => {
+			setFormData({...formData, errorMsg: ""})} 
+        }) ;
 
         } catch(error) {
 
             if(error instanceof TRPCClientError ){
 			
-			//catch db error
-			if(error.message.includes("SQLite error")){
-				setFormData({...formData, errorMsg: "Email already in use"})
-			//zod errors
-			}else {
-				const errorData = JSON.parse(error.message);
+                //catch db error
+                if(error.message.includes("SQLite error")){
+                    setFormData({...formData, errorMsg: "Email already in use"})
+                    
+                //zod errors
+                }else {
+                    const errorData = JSON.parse(error.message);
 
-				//display first zod error
-				const firstErrorMessage = errorData[0].message;
-				setFormData({...formData, errorMsg: firstErrorMessage })
-			}
+                    //display first zod error
+                    const firstErrorMessage = errorData[0].message;
+                    setFormData({...formData, errorMsg: firstErrorMessage })
+                }
 				
-		}
+		    }
         }   
 }
 

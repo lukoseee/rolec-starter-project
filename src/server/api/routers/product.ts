@@ -1,6 +1,6 @@
 import { string, z, ZodError } from "zod";
 
-import { createTRPCRouter, publicProcedure } from "src/server/api/trpc";
+import { createTRPCRouter, protectedProcedure, publicProcedure } from "src/server/api/trpc";
 import { products, users } from "src/server/db/schema";
 import { emails } from "src/server/db/schema";
 import { eq } from "drizzle-orm";
@@ -22,7 +22,7 @@ const userSchema = z.object( {
 
 export const productRouter = createTRPCRouter({
 
-    create: publicProcedure
+    create: protectedProcedure
 		.input(z.object({ text: z.string()}))
 		.mutation(async ({ ctx, input }) => {
 		await ctx.db.insert(emails).values({

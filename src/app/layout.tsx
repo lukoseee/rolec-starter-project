@@ -14,23 +14,6 @@ const mainFont = Montserrat({
 export default function Root({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
-	const pathname = usePathname();
-	
-	//Reload page on redirect to prevent global style leakage
-	useEffect(() => {
-		// Track previous and current route groups
-		const currentRouteGroup = pathname?.startsWith('/account') ? 'account' : 'dashboard';
-		const previousRouteGroup = sessionStorage.getItem('currentRouteGroup');
-
-		if (previousRouteGroup && previousRouteGroup !== currentRouteGroup) {
-		// Force reload if switching between account/dashboard groups
-		window.location.reload();
-		}
-		// Store current route group
-		sessionStorage.setItem('currentRouteGroup', currentRouteGroup);
-	}, [pathname]);
-
-
     return(
 	<ClerkProvider>
         <html  lang="en" className={`${mainFont.className } `} >
