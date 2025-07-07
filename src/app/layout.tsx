@@ -5,6 +5,7 @@ import { Montserrat } from "next/font/google";
 import { usePathname} from "next/navigation";
 import { useEffect } from "react";
 import { TRPCReactProvider } from "src/trpc/react";
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const mainFont = Montserrat({
   subsets: ["latin"],
@@ -20,6 +21,7 @@ export default function Root({
             <meta name="viewport"/>
             <body className="bg-[#F6F6F6] m-0 p-0">
                 <TRPCReactProvider>{children}</TRPCReactProvider>
+		    <SpeedInsights />
             </body>
         </html>
 	</ClerkProvider>
